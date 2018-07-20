@@ -1,0 +1,63 @@
+.main {
+  animation-duration: 2s;
+  animation-name: adjustHeight; }
+
+.inner {
+  animation-duration: 4s;
+  animation-name: fadeIn; }
+
+@keyframes adjustHeight {
+  from {
+    height: 0; }
+  to {
+    height: 200px; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  10% {
+    opacity: 0; }
+  to {
+    opacity: inherit; } }
+.is-centered {
+  text-align: center; }
+
+.subtitles {
+  position: relative;
+  height: 150px;
+  line-height: 150px; }
+
+.navbar {
+  padding: 0 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background-color: #3c2e3d; }
+  .navbar a {
+    height: 100%;
+    color: #fff; }
+    .navbar a:hover {
+      color: #ecc7c0;
+      border-bottom: 1px solid #ecc7c0;
+      background-color: #3c2e3d; }
+
+.home-section {
+  background-color: #3c2e3d;
+  height: 660px;
+  padding-top: 200px; }
+  .home-section .main {
+    height: 200px;
+    width: 30%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff; }
+    .home-section .main .title {
+      color: #fff; }
+    .home-section .main .subtitle {
+      color: #fff;
+      margin-bottom: 5px; }
+
+/*# sourceMappingURL=style.css.map */

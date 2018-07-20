@@ -1,0 +1,20 @@
+.main {
+  animation-duration: 2s;
+  animation-name: adjustHeight;
+}
+
+.inner {
+  animation-duration: 4s;
+  animation-name: fadeIn;
+}
+
+@keyframes adjustHeight {
+  from { height: 0; }
+  to { height: 200px; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  10% { opacity: 0 }
+  to { opacity: inherit; }
+}
