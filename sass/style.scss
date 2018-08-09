@@ -6,8 +6,8 @@
 
 .subtitles {
   position: relative;
-  height: 150px;
-  line-height: 150px;
+  height: 100px;
+  line-height: 100px;
 }
 
 .navbar {
@@ -27,6 +27,7 @@
     }
   }
 }
+
 
 .home-section {
   background-color: #3c2e3d;
@@ -48,5 +49,13 @@
       color: #fff;
       margin-bottom: 5px;
     }
+  }
+}
+
+.about-section {
+  #profile-image {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
   }
 }
