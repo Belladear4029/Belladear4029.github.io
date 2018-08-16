@@ -18,13 +18,44 @@
     opacity: 0; }
   to {
     opacity: inherit; } }
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; }
+
 .is-centered {
   text-align: center; }
 
+.section {
+  padding-top: 0; }
+
+.name {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 10px !important;
+  font-weight: 200; }
+
+.role {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 200; }
+
 .subtitles {
-  position: relative;
-  height: 100px;
-  line-height: 100px; }
+  height: 50px;
+  line-height: 50px;
+  margin-top: 50px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #3C2E3D; }
+
+hr {
+  margin-top: 0; }
+
+.underline {
+  width: 33%;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  border-top: 1px solid #ECC7C0; }
 
 .navbar {
   padding: 0 400px;
@@ -35,11 +66,13 @@
   background-color: #3c2e3d; }
   .navbar a {
     height: 100%;
-    color: #fff; }
+    color: #fff;
+    display: flex;
+    align-items: center; }
     .navbar a:hover {
-      color: #ecc7c0;
-      border-bottom: 1px solid #ecc7c0;
-      background-color: #3c2e3d; }
+      color: #fff;
+      border-bottom: 1px solid #ECC7C0;
+      background-color: #3C2E3D; }
 
 .home-section {
   background-color: #3c2e3d;
@@ -52,8 +85,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff; }
+    border-top: 1px solid #ECC7C0;
+    border-bottom: 1px solid #ECC7C0; }
     .home-section .main .title {
       color: #fff; }
     .home-section .main .subtitle {
@@ -64,5 +97,32 @@
   display: block;
   margin: 0 auto;
   border-radius: 50%; }
+.about-section p {
+  height: 200px;
+  display: flex;
+  align-items: center; }
+
+.project-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center; }
+  .project-links .button {
+    margin: 0 10px;
+    font-size: 13px;
+    width: 100px;
+    border: 1px solid #3c2e3d;
+    transition: 0.3s ease; }
+    .project-links .button:hover {
+      transform: scale(1.03); }
+
+.contact-links {
+  display: flex;
+  justify-content: center; }
+  .contact-links .button {
+    margin: 0 10px;
+    border: 1px solid #3c2e3d;
+    transition: 0.3s ease; }
+    .contact-links .button:hover {
+      transform: scale(1.03); }
 
 /*# sourceMappingURL=style.css.map */

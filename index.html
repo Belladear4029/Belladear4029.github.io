@@ -4,18 +4,19 @@
   <meta charset="utf-8">
   <title>Bella Dear</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- <script src="./js/app.js" charset="utf-8"></script> -->
+  <script src="./js/app.js" charset="utf-8"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Hind+Guntur:300,400|Hind+Madurai|Merriweather+Sans:300|Metrophobic|Montserrat:300|Nixie+One|Noto+Sans|Open+Sans:300" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
   <!-- navbar -->
   <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-    <a href="#top" class="navbar-item">Bella</a>
-    <a href="#about" class="navbar-item">About</a>
-    <a href="#work" class="navbar-item">Work</a>
-    <a href="#contact" class="navbar-item">Contact</a>
+    <a class="navbar-item home-link">Home</a>
+    <a class="navbar-item about-link">About</a>
+    <a class="navbar-item work-link">Work</a>
+    <a class="navbar-item contact-link">Contact</a>
   </nav>
 
   <main>
@@ -24,8 +25,8 @@
     <section class="home-section">
       <div class="main is-preload" id="main">
         <div class="inner">
-          <h1 class="title is-centered is-preload">Bella Dear</h1>
-          <h1 class="subtitle is-centered is-preload">Web developer.</h1>
+          <h1 class="title is-centered name">Bella Dear</h1>
+          <h1 class="title is-centered role">Web developer</h1>
         </div>
       </div>
     </section>
@@ -34,6 +35,7 @@
     <section class="section">
       <section class="about-section" id="about">
         <h1 class="subtitles is-centered">ABOUT</h1>
+        <hr class="underline">
         <div class="columns">
           <div class="column is-one-quarter">
             <img src="https://imgur.com/RaT1jlI.png" id="profile-image" alt="profile" width="200px">
@@ -50,26 +52,34 @@
       <!-- work -->
       <section class="work-section" id="work">
         <h1 class="subtitles is-centered">WORK</h1>
-        <hr>
+        <hr class="underline">
         <section class="i-recommend columns">
           <div class="column is-half">
             <img src="https://imgur.com/QXVx0RC.png" alt="iRecommend-screenshots" >
           </div>
           <div class="column is-half">
-            <h1 class="title is-4">iRecommend</h1>
+            <h1 class="title is-6 is-centered">iRecommend</h1>
             <p>
               I sometimes use tripadvisor when on holiday, although I never know which review to trust. They are always so different and when there is just one negative, you question yourself whether to go to that place at all. Therefore I decided to make an app where you are able to follow your friends/people that you trust and see their recommendations for each city - iRecommend.
               This was a MERN Stack application which also used a few third party APIs. I used Google Autocomplete and Google Places API to find the place a user wants to recommend. I also used Rest Countries API to get the language and currency codes for each country where there were recommendations and then used Yandex, a translating API and Oanda, an exchange rate API to provide more information for users when they click on a certain city.
             </p>
+            <div class="project-links">
+              <a class="button" href="https://i-recommend.herokuapp.com/">App</a>
+              <a class="button" href="https://github.com/Belladear4029/project-4-wdi">Github</a>
+            </div>
           </div>
         </section>
         <hr>
         <section class="evening-planner columns">
           <div class="column is-half">
-            <h1 class="title is-4">Evening Angel</h1>
+            <h1 class="title is-6 is-centered">Evening Angel</h1>
             <p>
               This was a group project creating a full MEAN stack app using our own API as well as others. For this app we wanted to make it easy for a user to bundle their evening together by giving them a selection of bars and restaurants near their chosen event; acting as a tool to organise their evening conveniently for them - Evening Angel. Firstly, we used Skiddle's API to return events so the user can find and select the event they are going to. We then used Google Places API to find nearby bars and restaurants in relation to the chosen event's location, within a radius chosen by the user. Once a 'bundle' is created, we provided a travel time calculation from a given starting location using Google Autocomplete and Citymapper's API.
             </p>
+            <div class="project-links">
+              <a class="button" href="https://evening-angel.herokuapp.com/">App</a>
+              <a class="button" href="https://github.com/Belladear4029/project-3-wdi">Github</a>
+            </div>
           </div>
           <div class="column is-half">
             <img src="https://imgur.com/ccB7itz.png" alt="evening-angel-screenshots">
@@ -80,36 +90,45 @@
           <div class="column is-half">
             <img src="https://imgur.com/RukGu6S.png" alt="instagrub-screenshots">
           </div>
-          <div class="column">
-            <h1 class="title is-4">Instagrub</h1>
+          <div class="column is-half">
+            <h1 class="title is-6 is-centered">Instagrub</h1>
             <p>
-              I love cooking and wanted to create an app that would act like a Instagram for food recipes. You can either just login and scroll to find a recipe that you like the look of, then click to see the ingredients and method. Users are also able to add and share their own recipes. I add features where you can comment and like recipes, therefore budding chefs are able to share their signature dishes and recieve feedback and love. This is a full stack app using Express and EJS.
+              I love cooking and wanted to create an app that would act like a Instagram for food recipes. Users can simply just login and scroll to find a recipe that they like the look of, then click to see the ingredients and method, or also add and share their own recipes. I added features so users can comment and like recipes, therefore budding chefs are able to share their signature dishes and recieve feedback and love. This is a full stack app using Express and EJS.
             </p>
+            <div class="project-links">
+              <a class="button" href="https://instagrub-app.herokuapp.com/">App</a>
+              <a class="button" href="https://github.com/Belladear4029/project-2-wdi">Github</a>
+            </div>
           </div>
         </section>
         <hr>
         <section class="tap-tap columns">
-          <div class="column">
-            <h1 class="title is-4">Tap Tap</h1>
+          <div class="column is-half">
+            <h1 class="title is-6 is-centered">Tap Tap</h1>
             <p>
               I created a similar styled game to 'Guitar Hero' and 'Tap Tap Revenge', with the aim of the game being to tap different keys in sync with when balls coming up the page come into contact with targets at the top, all in time with music. This game was made using HTML, CSS and Javascript using the jQuery Library.
             </p>
+            <div class="project-links">
+              <a class="button" href="https://belladear4029.github.io/project-1-wdi/">App</a>
+              <a class="button" href="https://github.com/Belladear4029/project-1-wdi">Github</a>
+            </div>
           </div>
           <div class="column is-half">
             <img src="https://imgur.com/whHOFvA.png" alt="instagrub-screenshots">
           </div>
         </section>
       </section>
-      <hr>
 
       <!-- contact -->
-      <section class="section-3" id="contact">
+      <section class="contact-section" id="contact">
         <h1 class="subtitles is-centered">CONTACT</h1>
-        <p class="contact-info"><img width="20px" src="http://cdn.onlinewebfonts.com/svg/img_504370.png" alt="email logo"><a href="mailto:arabellamdear@gmail.com">arabellamdear@gmail.com</a></p>
-        <p class="contact-info"><img width="20px" src="https://image.flaticon.com/icons/svg/25/25231.svg" alt="github logo"><a href="https://github.com/Belladear4029">github.com/Belladear4029</a></p>
-        <p class="contact-info"><img width="20px" src="https://png.icons8.com/metro/1600/linkedin.png" alt="linkedin logo"><a href="https://www.linkedin.com/in/belladear/">linkedin.com/in/belladear/</a></p>
+        <hr class="underline">
+        <div class="contact-links">
+          <a class="button" href="mailto:arabellamdear@gmail.com">Email Me</a>
+          <a class="button" href="https://www.linkedin.com/in/belladear/">My LinkedIn</a>
+          <a class="button" href="https://github.com/Belladear4029">My Github</a>
+        </div>
       </section>
-      <hr>
     </section>
   </main>
 
