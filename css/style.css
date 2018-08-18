@@ -76,7 +76,8 @@ hr {
 
 .home-section {
   background-color: #3c2e3d;
-  height: 660px;
+  height: 700px;
+  position: relative;
   padding-top: 200px; }
   .home-section .main {
     height: 200px;
