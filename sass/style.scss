@@ -30,7 +30,8 @@
 .subtitles {
   height: 50px;
   line-height: 50px;
-  margin-top: 50px;
+  margin-top: 80px;
+  font-size: 25px;
   font-weight: 600;
   letter-spacing: 2px;
   color: #3C2E3D;
@@ -91,20 +92,21 @@ hr {
 }
 
 .about-section {
+  margin: 0 70px 200px 70px !important;
   #profile-image {
     display: block;
     margin: 0 auto;
     border-radius: 50%;
   }
   p {
-    height: 200px;
+    height: 130px;
     display: flex;
     align-items: center;
   }
 }
 
 .project-links {
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   .button {
