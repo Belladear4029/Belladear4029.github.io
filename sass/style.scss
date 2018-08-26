@@ -72,6 +72,7 @@ hr {
 .home-section {
   background-color: #3c2e3d;
   height: 100vh;
+  width: 100vw;
   padding-top: 17%;
   .main {
     height: 200px;
@@ -124,11 +125,36 @@ hr {
 }
 
 .work-section {
+  .column {
+    min-height: 50vh;
+  }
   #i-recommend {
     margin-top: 10px;
   }
   #evening-angel {
     padding-top: 0;
+  }
+  .static {
+    position: absolute;
+  }
+  .active {
+    position: absolute;
+    opacity: 0;
+    margin-left: 55px;
+    margin-top: 41px;
+    &:hover {
+      opacity: 100;
+    }
+  }
+  #tap-tap-img {
+    margin-top: 60px;
+  }
+  #i-recommend-img {
+    margin-top: 60px;
+  }
+  img.border {
+    border-top: 20px solid #222;
+    border-bottom: 20px solid #222;
   }
   .project-description {
     text-align: justify;

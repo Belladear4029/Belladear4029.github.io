@@ -87,6 +87,7 @@ hr {
 .home-section {
   background-color: #3c2e3d;
   height: 100vh;
+  width: 100vw;
   padding-top: 17%; }
   .home-section .main {
     height: 200px;
@@ -128,10 +129,28 @@ hr {
       text-align: center;
       height: 90px; }
 
+.work-section .column {
+  min-height: 50vh; }
 .work-section #i-recommend {
   margin-top: 10px; }
 .work-section #evening-angel {
   padding-top: 0; }
+.work-section .static {
+  position: absolute; }
+.work-section .active {
+  position: absolute;
+  opacity: 0;
+  margin-left: 55px;
+  margin-top: 41px; }
+  .work-section .active:hover {
+    opacity: 100; }
+.work-section #tap-tap-img {
+  margin-top: 60px; }
+.work-section #i-recommend-img {
+  margin-top: 60px; }
+.work-section img.border {
+  border-top: 20px solid #222;
+  border-bottom: 20px solid #222; }
 .work-section .project-description {
   text-align: justify; }
 .work-section .project-links {
