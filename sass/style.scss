@@ -99,20 +99,18 @@ hr {
     margin-top: 15px;
     border-radius: 50%;
   }
-  p {
+  .bio {
     height: 130px;
     display: flex;
     align-items: center;
   }
   .skills-section {
-    margin-top: 30px;
-    padding-top: 15px;
-    border-radius: 10px;
+    margin-top: 25px;
     .skills-title {
       letter-spacing: 2px;
-      margin-bottom: 0;
       font-size: 20px;
       font-weight: 600;
+      margin-bottom: 10px;
     }
     .skills {
       font-size: 20px;
