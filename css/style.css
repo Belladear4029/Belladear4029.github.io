@@ -111,7 +111,7 @@ hr {
     margin-top: 15px;
     border-radius: 50%; }
   .about-section .bio {
-    height: 130px;
+    min-height: 130px;
     display: flex;
     align-items: center; }
   .about-section .skills-section {
@@ -129,9 +129,11 @@ hr {
       height: 90px; }
 
 .work-section #i-recommend {
-  margin-top: 35px; }
+  margin-top: 10px; }
 .work-section #evening-angel {
-  margin-top: 25px; }
+  padding-top: 0; }
+.work-section .project-description {
+  text-align: justify; }
 .work-section .project-links {
   margin-top: 20px;
   display: flex;

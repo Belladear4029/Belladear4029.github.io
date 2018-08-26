@@ -101,7 +101,7 @@ hr {
     border-radius: 50%;
   }
   .bio {
-    height: 130px;
+    min-height: 130px;
     display: flex;
     align-items: center;
   }
@@ -125,10 +125,13 @@ hr {
 
 .work-section {
   #i-recommend {
-    margin-top: 35px;
+    margin-top: 10px;
   }
   #evening-angel {
-    margin-top: 25px;
+    padding-top: 0;
+  }
+  .project-description {
+    text-align: justify;
   }
   .project-links {
     margin-top: 20px;
