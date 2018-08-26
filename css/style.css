@@ -6,6 +6,10 @@
   animation-duration: 4s;
   animation-name: fadeIn; }
 
+.navbar a:hover {
+  animation-duration: 1s;
+  animation-name: underline; }
+
 @keyframes adjustHeight {
   from {
     height: 0; }
@@ -18,6 +22,11 @@
     opacity: 0; }
   to {
     opacity: inherit; } }
+@keyframes underline {
+  from {
+    border-bottom-color: #3C2E3D; }
+  to {
+    border-bottom-color: #ECC7C0; } }
 * {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400; }
