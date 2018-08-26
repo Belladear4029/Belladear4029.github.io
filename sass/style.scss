@@ -92,10 +92,11 @@ hr {
 }
 
 .about-section {
-  margin: 0 70px 200px 70px !important;
+  margin: 0 70px 100px 70px !important;
   #profile-image {
     display: block;
     margin: 0 auto;
+    margin-top: 15px;
     border-radius: 50%;
   }
   p {
@@ -103,20 +104,46 @@ hr {
     display: flex;
     align-items: center;
   }
+  .skills-section {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-radius: 10px;
+    .skills-title {
+      letter-spacing: 2px;
+      margin-bottom: 0;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .skills {
+      font-size: 20px;
+      color: #9b9b9b;
+      word-spacing: 10px;
+      text-align: center;
+      height: 90px;
+    }
+  }
 }
 
-.project-links {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  .button {
-    margin: 0 10px;
-    font-size: 13px;
-    width: 130px;
-    border: 1px solid rgb(60,46,61);
-    transition: 0.3s ease;
-    &:hover {
-      transform: scale(1.03);
+.work-section {
+  #i-recommend {
+    margin-top: 35px;
+  }
+  #evening-angel {
+    margin-top: 25px;
+  }
+  .project-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    .button {
+      margin: 0 10px;
+      font-size: 13px;
+      width: 130px;
+      border: 1px solid rgb(60,46,61);
+      transition: 0.3s ease;
+      &:hover {
+        transform: scale(1.03);
+      }
     }
   }
 }

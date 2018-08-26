@@ -95,27 +95,47 @@ hr {
       margin-bottom: 5px; }
 
 .about-section {
-  margin: 0 70px 200px 70px !important; }
+  margin: 0 70px 100px 70px !important; }
   .about-section #profile-image {
     display: block;
     margin: 0 auto;
+    margin-top: 15px;
     border-radius: 50%; }
   .about-section p {
     height: 130px;
     display: flex;
     align-items: center; }
+  .about-section .skills-section {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-radius: 10px; }
+    .about-section .skills-section .skills-title {
+      letter-spacing: 2px;
+      margin-bottom: 0;
+      font-size: 20px;
+      font-weight: 600; }
+    .about-section .skills-section .skills {
+      font-size: 20px;
+      color: #9b9b9b;
+      word-spacing: 10px;
+      text-align: center;
+      height: 90px; }
 
-.project-links {
+.work-section #i-recommend {
+  margin-top: 35px; }
+.work-section #evening-angel {
+  margin-top: 25px; }
+.work-section .project-links {
   margin-top: 20px;
   display: flex;
   justify-content: center; }
-  .project-links .button {
+  .work-section .project-links .button {
     margin: 0 10px;
     font-size: 13px;
     width: 130px;
     border: 1px solid #3c2e3d;
     transition: 0.3s ease; }
-    .project-links .button:hover {
+    .work-section .project-links .button:hover {
       transform: scale(1.03); }
 
 .contact-links {
