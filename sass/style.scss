@@ -196,7 +196,30 @@ hr {
 // MOBILE
 
 @media only screen and (max-device-width: 1000px) {
+  .navbar {
+    font-size: 30px;
+    height: 60px;
+    line-height: 60px;
+  }
+  .home-section {
+    padding-top: 50%;
+  }
+  .about-section {
+    height: 100vh;
+    .bio {
+      margin-bottom: 20px;
+    }
+    .skills-section {
+      margin-top: 100px;
+      p {
+        font-size: 16px;
+      }
+    }
+  }
   .work-section {
+    .column {
+      min-height: 25vh;
+    }
     .static {
       position: relative;
     }

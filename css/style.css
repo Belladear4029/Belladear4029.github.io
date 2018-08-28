@@ -171,6 +171,25 @@ hr {
       transform: scale(1.03); }
 
 @media only screen and (max-device-width: 1000px) {
+  .navbar {
+    font-size: 30px;
+    height: 60px;
+    line-height: 60px; }
+
+  .home-section {
+    padding-top: 50%; }
+
+  .about-section {
+    height: 100vh; }
+    .about-section .bio {
+      margin-bottom: 20px; }
+    .about-section .skills-section {
+      margin-top: 100px; }
+      .about-section .skills-section p {
+        font-size: 16px; }
+
+  .work-section .column {
+    min-height: 25vh; }
   .work-section .static {
     position: relative; }
   .work-section .active {
