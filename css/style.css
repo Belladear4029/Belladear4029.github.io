@@ -37,18 +37,6 @@
 .section {
   padding-top: 0; }
 
-.name {
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin-bottom: 10px !important;
-  font-weight: 200; }
-
-.role {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 12px;
-  font-weight: 200; }
-
 .subtitles {
   height: 50px;
   line-height: 50px;
@@ -87,7 +75,6 @@ hr {
 .home-section {
   background-color: #3c2e3d;
   height: 100vh;
-  width: 100vw;
   padding-top: 17%; }
   .home-section .main {
     height: 200px;
@@ -100,9 +87,16 @@ hr {
     border-bottom: 1px solid #ECC7C0; }
     .home-section .main .title {
       color: #fff; }
-    .home-section .main .subtitle {
-      color: #fff;
-      margin-bottom: 5px; }
+    .home-section .main .name {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 10px !important;
+      font-weight: 200; }
+    .home-section .main .role {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 200; }
 
 .about-section {
   margin: 0 70px 100px 70px !important; }
@@ -175,5 +169,11 @@ hr {
     transition: 0.3s ease; }
     .contact-links .button:hover {
       transform: scale(1.03); }
+
+@media only screen and (max-device-width: 1000px) {
+  .work-section .static {
+    position: relative; }
+  .work-section .active {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,7 @@
 @import "./animations";
 
+// GLOBAL
+
 * {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -11,20 +13,6 @@
 
 .section {
   padding-top: 0;
-}
-
-.name {
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin-bottom: 10px !important;
-  font-weight: 200;
-}
-
-.role {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 12px;
-  font-weight: 200;
 }
 
 .subtitles {
@@ -48,6 +36,8 @@ hr {
   border-top: 1px solid #ECC7C0;
 }
 
+// NAVBAR
+
 .navbar {
   padding: 0 400px;
   display: flex;
@@ -68,11 +58,11 @@ hr {
   }
 }
 
+// HOME
 
 .home-section {
   background-color: #3c2e3d;
   height: 100vh;
-  width: 100vw;
   padding-top: 17%;
   .main {
     height: 200px;
@@ -86,12 +76,22 @@ hr {
     .title {
       color: #fff;
     }
-    .subtitle {
-      color: #fff;
-      margin-bottom: 5px;
+    .name {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 10px !important;
+      font-weight: 200;
+    }
+    .role {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 200;
     }
   }
 }
+
+// ABOUT
 
 .about-section {
   margin: 0 70px 100px 70px !important;
@@ -123,6 +123,8 @@ hr {
     }
   }
 }
+
+// WORK
 
 .work-section {
   .column {
@@ -176,6 +178,8 @@ hr {
   }
 }
 
+//CONTACT
+
 .contact-links {
   display: flex;
   justify-content: center;
@@ -185,6 +189,19 @@ hr {
     transition: 0.3s ease;
     &:hover {
       transform: scale(1.03);
+    }
+  }
+}
+
+// MOBILE
+
+@media only screen and (max-device-width: 1000px) {
+  .work-section {
+    .static {
+      position: relative;
+    }
+    .active {
+      display: none;
     }
   }
 }
