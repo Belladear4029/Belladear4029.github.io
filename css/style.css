@@ -108,7 +108,8 @@ hr {
   .about-section .bio {
     min-height: 130px;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    text-align: justify; }
   .about-section .skills-section {
     margin-top: 25px; }
     .about-section .skills-section .skills-title {
@@ -125,23 +126,28 @@ hr {
 
 .work-section .column {
   min-height: 50vh; }
-.work-section #i-recommend {
+.work-section #i-recommend-img {
   margin-top: 10px; }
-.work-section #evening-angel {
+.work-section #evening-angel-img {
   padding-top: 0; }
-.work-section .static {
-  position: absolute; }
+.work-section .images {
+  position: relative;
+  display: inline; }
 .work-section .active {
   position: absolute;
   opacity: 0;
-  margin-left: 55px;
-  margin-top: 41px; }
+  top: 15%;
+  left: 11.4%;
+  max-width: 55%; }
   .work-section .active:hover {
     opacity: 100; }
-.work-section #tap-tap-img {
-  margin-top: 60px; }
-.work-section #i-recommend-img {
-  margin-top: 60px; }
+.work-section #i-recommend-gif {
+  top: 20.5%; }
+.work-section #instagrub-gif {
+  top: 16.5%; }
+.work-section #tap-tap-gif {
+  top: 22%;
+  left: 11.5%; }
 .work-section img.border {
   border-top: 20px solid #222;
   border-bottom: 20px solid #222; }
@@ -170,6 +176,12 @@ hr {
     .contact-links .button:hover {
       transform: scale(1.03); }
 
+@media only screen and (max-width: 1250px) {
+  .static {
+    position: relative; }
+
+  .active {
+    display: none; } }
 @media only screen and (max-device-width: 1000px) {
   .navbar {
     font-size: 30px;
@@ -190,9 +202,7 @@ hr {
 
   .work-section .column {
     min-height: 25vh; }
-  .work-section .static {
-    position: relative; }
-  .work-section .active {
-    display: none; } }
+  .work-section .images {
+    margin-left: 10px; } }
 
 /*# sourceMappingURL=style.css.map */

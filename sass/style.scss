@@ -105,6 +105,7 @@ hr {
     min-height: 130px;
     display: flex;
     align-items: center;
+    text-align: justify;
   }
   .skills-section {
     margin-top: 25px;
@@ -130,29 +131,39 @@ hr {
   .column {
     min-height: 50vh;
   }
-  #i-recommend {
+  #i-recommend-img {
     margin-top: 10px;
   }
-  #evening-angel {
+  #evening-angel-img {
     padding-top: 0;
   }
+  .images {
+    position: relative;
+    display: inline;
+  }
   .static {
-    position: absolute;
+    // position: absolute;
+    // display: inline;
   }
   .active {
     position: absolute;
     opacity: 0;
-    margin-left: 55px;
-    margin-top: 41px;
+    top: 15%;
+    left: 11.4%;
+    max-width: 55%;
     &:hover {
       opacity: 100;
     }
   }
-  #tap-tap-img {
-    margin-top: 60px;
+  #i-recommend-gif {
+    top: 20.5%;
   }
-  #i-recommend-img {
-    margin-top: 60px;
+  #instagrub-gif {
+    top: 16.5%;
+  }
+  #tap-tap-gif {
+    top: 22%;
+    left: 11.5%
   }
   img.border {
     border-top: 20px solid #222;
@@ -195,6 +206,15 @@ hr {
 
 // MOBILE
 
+@media only screen and (max-width: 1250px) {
+  .static {
+    position: relative;
+  }
+  .active {
+    display: none;
+  }
+}
+
 @media only screen and (max-device-width: 1000px) {
   .navbar {
     font-size: 30px;
@@ -220,11 +240,8 @@ hr {
     .column {
       min-height: 25vh;
     }
-    .static {
-      position: relative;
-    }
-    .active {
-      display: none;
+    .images {
+      margin-left: 10px;
     }
   }
 }
