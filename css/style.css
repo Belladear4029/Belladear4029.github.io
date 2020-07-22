@@ -170,14 +170,14 @@ hr {
   position: relative;
   display: inline;
 }
-.work-section .active {
+.work-section img.active {
   position: absolute;
   opacity: 0;
   top: 15%;
   left: 11.4%;
   max-width: 55%;
 }
-.work-section .active:hover {
+.work-section img.active:hover {
   opacity: 100;
 }
 .work-section #i-recommend-gif {
@@ -216,6 +216,7 @@ hr {
   display: flex;
   width: max-content;
   overflow: hidden;
+  transition: transform ease 1s;
   cursor: pointer;
 }
 .work-section .carousel .slide {
@@ -225,6 +226,10 @@ hr {
 .work-section .slide-selectors {
   display: flex;
   justify-content: space-evenly;
+}
+.work-section .slide-selectors .slide-selector.active {
+  border-color: #ecc7c0;
+  border-width: 2px;
 }
 
 .contact-links {
@@ -245,7 +250,7 @@ hr {
     position: relative;
   }
 
-  .active {
+  img.active {
     display: none;
   }
 }

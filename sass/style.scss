@@ -142,7 +142,7 @@ hr {
     display: inline;
   }
 
-  .active {
+  img.active {
     position: absolute;
     opacity: 0;
     top: 15%;
@@ -201,6 +201,11 @@ hr {
   .slide-selectors {
     display: flex;
     justify-content: space-evenly;
+
+    .slide-selector.active {
+      border-color: #ecc7c0;
+      border-width: 2px;
+    }
   }
 }
 
@@ -225,7 +230,7 @@ hr {
   .static {
     position: relative;
   }
-  .active {
+  img.active {
     display: none;
   }
 }

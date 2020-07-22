@@ -1,10 +1,12 @@
 $(() => {
   let mouseIsDown = false;
-  let selectedSlide = 0;
+  let selectedSlideIndex = 0;
   let carouselPosition = 0;
   const $carousel = $(".carousel");
+  const $slideSelectors = $(".slide-selectors");
   const $slideSelector = $(".slide-selector");
-  const slideNumber = $carousel[0].children.length;
+  const slideSelectors = Array.from($slideSelectors[0].children);
+  const slideCount = $carousel[0].children.length;
 
   $(document).on("click", 'a[href^="#"]', function (event) {
     event.preventDefault();
@@ -18,54 +20,62 @@ $(() => {
   });
 
   window.addEventListener('resize', function (event) {
-    setSelectedSlide();
+    setSelectedSlideIndex();
   });
 
   const setCarouselPosition = (position) => {
     const threshold = 100;
 
-    if (-(slideNumber - 1) * window.innerWidth - threshold < position && position < threshold) {
+    if (-(slideCount - 1) * window.innerWidth - threshold < position && position < threshold) {
       $carousel[0].style.transform = `translateX(${position}px)`;
     }
   };
 
-  const setSelectedSlide = (slideIndex) => {
-    if (0 <= slideIndex && slideIndex < $carousel[0].children.length) {
-      selectedSlide = slideIndex;
+  const setActiveStates = (slideIndex) => {
+    slideSelectors.forEach(slideSelector => slideSelector.classList.remove('active'))
+    const selectedSlideSelector = slideSelectors.find((slideSelector, i) => i === slideIndex)
+    selectedSlideSelector.classList.add('active');
+  }
+
+  const setSelectedSlideIndex = (slideIndex) => {
+    if (0 <= slideIndex && slideIndex < slideCount) {
+      selectedSlideIndex = slideIndex;
     }
-    carouselPosition = -selectedSlide * window.innerWidth;
-    setCarouselPosition(-selectedSlide * window.innerWidth);
+
+    carouselPosition = -selectedSlideIndex * window.innerWidth;
+    setCarouselPosition(-selectedSlideIndex * window.innerWidth);
+    setActiveStates(slideIndex);
   };
 
   $slideSelector.on("click", function (event) {
     const slideIndex = Array.from(event.target.parentNode.children).indexOf(event.target);
-    setSelectedSlide(slideIndex);
+    setSelectedSlideIndex(slideIndex);
   });
 
   const snapToSlide = (event) => {
     $carousel[0].style.transition = 'transform ease 1s';
     mouseIsDown = false;
     endingPosition = event.screenX;
-    let selectedSlideIndex;
+    let slideIndex;
     const difference = startingPosition - endingPosition;
     const threshold = 150;
 
     if (difference > threshold) {
-      selectedSlideIndex = selectedSlide + 1;
+      slideIndex = selectedSlideIndex + 1;
     } else if (difference < -threshold) {
-      selectedSlideIndex = selectedSlide - 1;
+      slideIndex = selectedSlideIndex - 1;
     } else {
-      selectedSlideIndex = selectedSlide;
+      slideIndex = selectedSlideIndex;
     }
 
-    setSelectedSlide(selectedSlideIndex)
+    setSelectedSlideIndex(slideIndex)
   }
 
   let startingPosition;
   let endingPosition;
 
   $carousel.on("mousedown", (event) => {
-    $carousel[0].style.transition = '';
+    $carousel[0].style.transition = 'none';
     mouseIsDown = true;
     startingPosition = event.screenX;
   });
