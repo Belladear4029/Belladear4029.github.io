@@ -3,7 +3,7 @@
 // GLOBAL
 
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 
@@ -22,7 +22,7 @@
   font-size: 23px;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #3C2E3D;
+  color: #3c2e3d;
 }
 
 hr {
@@ -33,7 +33,7 @@ hr {
   width: 33%;
   margin: 0 auto;
   margin-bottom: 24px;
-  border-top: 1px solid #ECC7C0;
+  border-top: 1px solid #ecc7c0;
 }
 
 // NAVBAR
@@ -52,8 +52,8 @@ hr {
     align-items: center;
     &:hover {
       color: #fff;
-      border-bottom: 1px solid #ECC7C0;
-      background-color: #3C2E3D;
+      border-bottom: 1px solid #ecc7c0;
+      background-color: #3c2e3d;
     }
   }
 }
@@ -71,8 +71,8 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 1px solid #ECC7C0;
-    border-bottom: 1px solid #ECC7C0;
+    border-top: 1px solid #ecc7c0;
+    border-bottom: 1px solid #ecc7c0;
     .title {
       color: #fff;
     }
@@ -141,10 +141,7 @@ hr {
     position: relative;
     display: inline;
   }
-  .static {
-    // position: absolute;
-    // display: inline;
-  }
+
   .active {
     position: absolute;
     opacity: 0;
@@ -163,7 +160,7 @@ hr {
   }
   #tap-tap-gif {
     top: 22%;
-    left: 11.5%
+    left: 11.5%;
   }
   img.border {
     border-top: 20px solid #222;
@@ -180,12 +177,30 @@ hr {
       margin: 0 10px;
       font-size: 13px;
       width: 130px;
-      border: 1px solid rgb(60,46,61);
+      border: 1px solid rgb(60, 46, 61);
       transition: 0.3s ease;
       &:hover {
         transform: scale(1.03);
       }
     }
+  }
+
+  .carousel {
+    display: flex;
+    width: max-content;
+    overflow: hidden;
+    transition: transform ease 1s;
+    cursor: pointer;
+
+    .slide {
+      width: 100vw;
+      padding: 0 50px;
+    }
+  }
+
+  .slide-selectors {
+    display: flex;
+    justify-content: space-evenly;
   }
 }
 
@@ -196,7 +211,7 @@ hr {
   justify-content: center;
   .button {
     margin: 0 10px;
-    border: 1px solid rgb(60,46,61);
+    border: 1px solid rgb(60, 46, 61);
     transition: 0.3s ease;
     &:hover {
       transform: scale(1.03);
