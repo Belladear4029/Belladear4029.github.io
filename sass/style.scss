@@ -191,10 +191,11 @@ hr {
     overflow: hidden;
     transition: transform ease 1s;
     cursor: pointer;
+    margin: 100px 0;
 
     .slide {
       width: 100vw;
-      padding: 0 50px;
+      padding: 0 200px;
     }
   }
 

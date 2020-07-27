@@ -1,12 +1,13 @@
 $(() => {
   let mouseIsDown = false;
   let selectedSlideIndex = 0;
+  let slideCount;
   let carouselPosition = 0;
+  let $activeCarousel;
   const $carousel = $(".carousel");
   const $slideSelectors = $(".slide-selectors");
   const $slideSelector = $(".slide-selector");
-  const slideSelectors = Array.from($slideSelectors[0].children);
-  const slideCount = $carousel[0].children.length;
+  const slideSelectors = $slideSelectors[0] && Array.from($slideSelectors[0].children);
 
   $(document).on("click", 'a[href^="#"]', function (event) {
     event.preventDefault();
@@ -23,11 +24,15 @@ $(() => {
     setSelectedSlideIndex();
   });
 
+  const setSlideCount = () => {
+    slideCount = $activeCarousel && $activeCarousel.children.length;
+  }
+
   const setCarouselPosition = (position) => {
     const threshold = 100;
 
     if (-(slideCount - 1) * window.innerWidth - threshold < position && position < threshold) {
-      $carousel[0].style.transform = `translateX(${position}px)`;
+      $activeCarousel.style.transform = `translateX(${position}px)`;
     }
   };
 
@@ -44,7 +49,10 @@ $(() => {
 
     carouselPosition = -selectedSlideIndex * window.innerWidth;
     setCarouselPosition(-selectedSlideIndex * window.innerWidth);
-    setActiveStates(slideIndex);
+
+    if (slideSelectors) {
+      setActiveStates(slideIndex);
+    }
   };
 
   $slideSelector.on("click", function (event) {
@@ -52,8 +60,11 @@ $(() => {
     setSelectedSlideIndex(slideIndex);
   });
 
+  let startingPosition;
+  let endingPosition;
+
   const snapToSlide = (event) => {
-    $carousel[0].style.transition = 'transform ease 1s';
+    $activeCarousel.style.transition = 'transform ease 1s';
     mouseIsDown = false;
     endingPosition = event.screenX;
     let slideIndex;
@@ -67,20 +78,20 @@ $(() => {
     } else {
       slideIndex = selectedSlideIndex;
     }
-
     setSelectedSlideIndex(slideIndex)
   }
 
-  let startingPosition;
-  let endingPosition;
-
-  $carousel.on("mousedown", (event) => {
-    $carousel[0].style.transition = 'none';
-    mouseIsDown = true;
+  $carousel.mousedown(function(event) {
+    const exisitingPosition = $(this)[0].style.transform.replace(/[^\d.]/g, '');
+    $activeCarousel = $(this)[0];
+    setSlideCount();
+    setSelectedSlideIndex(+exisitingPosition / window.innerWidth)
+    $activeCarousel.style.transition = 'none';
     startingPosition = event.screenX;
+    mouseIsDown = true;
   });
 
-  $carousel.on("mousemove", (event) => {
+  $carousel.mousemove(function (event) {
     if (mouseIsDown) {
       event.preventDefault()
       const dragDistance = startingPosition - event.screenX;
@@ -89,13 +100,13 @@ $(() => {
     }
   });
 
-  $carousel.on("mouseleave", (event) => {
+  $carousel.mouseleave(function (event) {
     if (mouseIsDown) {
       snapToSlide(event)
     }
   });
 
-  $carousel.on("mouseup", (event) => {
+  $carousel.mouseup(function (event) {
     snapToSlide(event)
   });
 });

@@ -218,10 +218,11 @@ hr {
   overflow: hidden;
   transition: transform ease 1s;
   cursor: pointer;
+  margin: 100px 0;
 }
 .work-section .carousel .slide {
   width: 100vw;
-  padding: 0 50px;
+  padding: 0 200px;
 }
 .work-section .slide-selectors {
   display: flex;
