@@ -6,7 +6,6 @@
   <title>Bella Dear | Web Developer London</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./js/app.js" charset="utf-8"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
   <link
     href="https://fonts.googleapis.com/css?family=Didact+Gothic|Hind+Guntur:300,400|Hind+Madurai|Merriweather+Sans:300|Metrophobic|Montserrat:300|Nixie+One|Noto+Sans|Open+Sans:300"
     rel="stylesheet" />
@@ -15,72 +14,66 @@
 </head>
 
 <body>
-  <!-- navbar -->
-  <nav class="navbar is-fixed-top">
-    <a class="navbar-item" href="#home">Home</a>
-    <a class="navbar-item about-link" href="#about">About</a>
-    <a class="navbar-item work-link" href="#work">Work</a>
-    <a class="navbar-item contact-link" href="#contact">Contact</a>
+  <!-- nav -->
+  <nav class="nav">
+    <a class="nav-title" href="#home">Bella Dear</a>
+    <div class="nav-items">
+      <a class="nav-item about-link" href="#about">About</a>
+      <a class="nav-item work-link" href="#work">Work</a>
+      <a class="nav-item contact-link" href="#contact">Contact</a>
+    </div>
   </nav>
 
   <main>
     <!-- home -->
     <section class="home-section" id="home">
       <div class="main">
-        <div class="inner">
-          <h1 class="title is-centered name">Bella Dear</h1>
-          <h1 class="title is-centered role">Web developer</h1>
-        </div>
+        <h1 class="title centered">
+          Born in New York, based in London. Bella is a software engineer with
+          a passion for cooking.
+        </h1>
       </div>
     </section>
 
     <!-- about -->
-    <div class="container">
-      <section class="about-section" id="about">
-        <h1 class="subtitles is-centered">ABOUT</h1>
-        <hr class="underline" />
-        <div class="columns">
-          <div class="column is-one-quarter">
-            <img src="https://imgur.com/RaT1jlI.png" id="profile-image" alt="profile" width="250px" />
-          </div>
-          <div class="column is-three-quarters">
-            <p class="bio">
-              I am a software developer with 2 years of work experience and a
-              degree in Physiology from the University of Bristol. I am
-              looking for a new and exciting opportunity within a high growth
-              organisation, using current technologies, where I can bring my
-              skill set to make an impact. I currently work at Publicis
-              Sapient working on the Nissan account and have also worked on
-              the RBS account since starting in October 2018.
-            </p>
-          </div>
-        </div>
-        <div class="skills-section">
-          <h1 class="skills-title is-centered">SKILLS</h1>
-          <div class="skills">
-            <p>Languages: JavaScript(ES2020) | HTML5 | CSS3</p>
-            <p>
-              Technologies: Node.js | Express | Mongoose | MongoDB | jQuery |
-              React.js | Redux | Styled Components | Vue.js | Vuex | AngularJS
-            </p>
-            <p>Other: Git | Github | Bitbucket | JIRA</p>
-          </div>
-        </div>
-      </section>
-    </div>
+    <section class="about-section" id="about">
+      <h1 class="bio">
+        I am a software developer with 2 years of work experience and a degree
+        in Physiology from the University of Bristol. I am looking for a new
+        and exciting opportunity within a high growth organisation, using
+        current technologies, where I can bring my skill set to make an
+        impact. I currently work at Publicis Sapient working on the Nissan
+        account and have also worked on the RBS account since starting in
+        October 2018.
+      </h1>
+    </section>
+
+    <!-- <img
+        src="https://imgur.com/RaT1jlI.png"
+        id="profile-image"
+        alt="profile"
+        width="250px"
+      /> -->
 
     <!-- work -->
     <section class="work-section" id="work">
-      <h1 class="subtitles is-centered">WORK</h1>
-      <hr class="underline" />
+      <h1 class="centered">WORK</h1>
 
-      <h1 class="title is-5 is-centered">Nissan - The Configurator</h1>
-      <div class="carousel">
-        <div class="slide images">
-          <img src="./assets/NissanConfDesktop.jpg" />
-        </div>
-        <div class="slide">
-          <p class="project-description">
+      <div class="ps-section">
+        <h1 class="title centered">Publicis Sapient</h1>
+        <div class="work-section">
+          <div class="carousel-container">
+            <div class="carousel">
+              <div class="slide images">
+                <img src="./assets/NissanConfDesktop.jpg" />
+              </div>
+              <div class="slide columns">
+                <img src="./assets/CWMobile.png" />
+                <img src="./assets/CWMobile2.png" />
+              </div>
+            </div>
+          </div>
+          <p class="work-description">
             My role has been to work within a team developing the Nissan
             website. Specifically, we have been developing the “build your own
             car” part to the website, which involves converting years of
@@ -95,6 +88,7 @@
         </div>
       </div>
 
+
       <!-- <div class="slide-selectors">
         <p class="slide-selector button active">1</p>
         <p class="slide-selector button">2</p>
@@ -104,12 +98,9 @@
         <p class="slide-selector button">6</p>
       </div> -->
 
-      <h1 class="title is-5 is-centered">RBS - Credit Wallet</h1>
+      <h1 class="title centered">RBS - Credit Wallet</h1>
       <div class="carousel">
-        <div class="slide columns">
-          <img src="./assets/CWMobile.png" />
-          <img src="./assets/CWMobile2.png" />
-        </div>
+
         <div class="slide">
           <p class="project-description">
             When I joined Publicis Sapient I started working on the RBS
@@ -120,10 +111,10 @@
         </div>
       </div>
 
-      <h1 class="title is-5 is-centered">iRecommend</h1>
+      <h1 class="title centered">iRecommend</h1>
       <div class="carousel">
         <div class="slide">
-          <p class="is-centered">
+          <p class="centered">
             <strong>Type:</strong> MERN Stack App |
             <strong>Duration:</strong> 1 week |
             <strong>Project:</strong> Individual
@@ -159,31 +150,29 @@
         </div>
       </div>
 
-      <h1 class="subtitles is-centered">OTHER WORK</h1>
+      <h1 class="subtitles centered">OTHER WORK</h1>
       <div class="evening-angel">
-        <h1 class="title is-5 is-centered">Evening Angel</h1>
-        <p class="is-centered">
-          <strong>Type:</strong> MEAN Stack App |
-          <strong>Duration:</strong> 1 week |
-          <strong>Project:</strong> Group
+        <h1 class="title is-5 centered">Evening Angel</h1>
+        <p class="centered">
+          <strong>Type:</strong> MEAN Stack App | <strong>Duration:</strong> 1
+          week | <strong>Project:</strong> Group
         </p>
         <br />
         <section class="columns">
           <div class="column is-half">
             <p class="project-description">
               This was a group project creating a full MEAN stack app using
-              our own API as well as others. For this app we wanted to make
-              it easy for a user to bundle their evening together by giving
-              them a selection of bars and restaurants near their chosen
-              event; acting as a tool to organise their evening conveniently
-              for them - Evening Angel. Firstly, we used Skiddle's API to
-              return events so the user can find and select the event they
-              are going to. We then used Google Places API to find nearby
-              bars and restaurants in relation to the chosen event's
-              location, within a radius chosen by the user. Once a 'bundle'
-              is created, we provided a travel time calculation from a given
-              starting location using Google Autocomplete and Citymapper's
-              API.
+              our own API as well as others. For this app we wanted to make it
+              easy for a user to bundle their evening together by giving them
+              a selection of bars and restaurants near their chosen event;
+              acting as a tool to organise their evening conveniently for them
+              - Evening Angel. Firstly, we used Skiddle's API to return events
+              so the user can find and select the event they are going to. We
+              then used Google Places API to find nearby bars and restaurants
+              in relation to the chosen event's location, within a radius
+              chosen by the user. Once a 'bundle' is created, we provided a
+              travel time calculation from a given starting location using
+              Google Autocomplete and Citymapper's API.
             </p>
             <div class="project-links">
               <a target="_blank" class="button" href="https://evening-angel.herokuapp.com/">Evening Angel</a>
@@ -200,8 +189,8 @@
       </div>
 
       <div class="instragrub">
-        <h1 class="title is-5 is-centered">Instagrub</h1>
-        <p class="is-centered">
+        <h1 class="title is-5 centered">Instagrub</h1>
+        <p class="centered">
           <strong>Type:</strong> Express App | <strong>Duration:</strong> 1
           week | <strong>Project:</strong> Individual
         </p>
@@ -214,13 +203,13 @@
           </div>
           <div class="column is-half">
             <p class="project-description">
-              I love cooking and wanted to create an app that would act like
-              a Instagram for food recipes. Users can login and scroll to
-              find a recipe that they like the look of, then click to see
-              the ingredients and method, or also add and share their own
-              recipes. I added features so users can comment and like
-              recipes, therefore budding chefs are able to share their
-              signature dishes and recieve feedback and love.
+              I love cooking and wanted to create an app that would act like a
+              Instagram for food recipes. Users can login and scroll to find a
+              recipe that they like the look of, then click to see the
+              ingredients and method, or also add and share their own recipes.
+              I added features so users can comment and like recipes,
+              therefore budding chefs are able to share their signature dishes
+              and recieve feedback and love.
             </p>
             <div class="project-links">
               <a target="_blank" class="button" href="https://instagrub-app.herokuapp.com/">Instagrub</a>
@@ -232,8 +221,8 @@
       </div>
 
       <div class="tap-tap">
-        <h1 class="title is-5 is-centered">Tap Tap</h1>
-        <p class="is-centered">
+        <h1 class="title is-5 centered">Tap Tap</h1>
+        <p class="centered">
           <strong>Type:</strong> JavaScript Game |
           <strong>Duration:</strong> 1 week |
           <strong>Project:</strong> Individual
@@ -265,8 +254,7 @@
     <!-- contact -->
     <div class="container">
       <section class="contact-section" id="contact">
-        <h1 class="subtitles is-centered">CONTACT</h1>
-        <hr class="underline" />
+        <h1 class="contact-title centered">Let's talk...</h1>
         <div class="contact-links">
           <a class="button" href="mailto:arabellamdear@gmail.com">Email Me</a>
           <a class="button" href="https://www.linkedin.com/in/belladear/">My LinkedIn</a>

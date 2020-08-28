@@ -31,7 +31,7 @@ $(() => {
   const setCarouselPosition = (position) => {
     const threshold = 100;
 
-    if (-(slideCount - 1) * window.innerWidth - threshold < position && position < threshold) {
+    if (-(slideCount - 1) * (window.innerWidth/2) - threshold < position && position < threshold) {
       $activeCarousel.style.transform = `translateX(${position}px)`;
     }
   };
@@ -47,8 +47,8 @@ $(() => {
       selectedSlideIndex = slideIndex;
     }
 
-    carouselPosition = -selectedSlideIndex * window.innerWidth;
-    setCarouselPosition(-selectedSlideIndex * window.innerWidth);
+    carouselPosition = -selectedSlideIndex * (window.innerWidth/2);
+    setCarouselPosition(-selectedSlideIndex * (window.innerWidth/2));
 
     if (slideSelectors) {
       setActiveStates(slideIndex);
@@ -85,7 +85,7 @@ $(() => {
     const exisitingPosition = $(this)[0].style.transform.replace(/[^\d.]/g, '');
     $activeCarousel = $(this)[0];
     setSlideCount();
-    setSelectedSlideIndex(+exisitingPosition / window.innerWidth)
+    setSelectedSlideIndex(+exisitingPosition / (window.innerWidth/2))
     $activeCarousel.style.transition = 'none';
     startingPosition = event.screenX;
     mouseIsDown = true;

@@ -1,9 +1,4 @@
 .main {
-  animation-duration: 2s;
-  animation-name: adjustHeight;
-}
-
-.inner {
   animation-duration: 4s;
   animation-name: fadeIn;
 }
@@ -11,11 +6,6 @@
 .navbar a:hover {
   animation-duration: 1s;
   animation-name: underline;
-}
-
-@keyframes adjustHeight {
-  from { height: 0; }
-  to { height: 200px; }
 }
 
 @keyframes fadeIn {

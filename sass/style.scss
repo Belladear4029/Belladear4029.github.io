@@ -1,133 +1,96 @@
 @import "./animations";
 
-// GLOBAL
+:root {
+  --primary-color: #28383e;
+  --secondary-color: #ffe6d6;
+  --tertiary-color: #de6247;
+}
 
+// GLOBAL
 * {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  box-sizing: border-box;
 }
 
-.is-centered {
+body {
+  margin: 0;
+  border: 7px solid var(--primary-color);
+}
+
+.centered {
   text-align: center;
 }
 
-.section {
-  padding-top: 0;
-}
-
-.subtitles {
-  height: 50px;
-  line-height: 50px;
-  margin-top: 80px;
-  font-size: 23px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: #3c2e3d;
-}
-
-hr {
-  margin-top: 0;
-}
-
-.underline {
-  width: 33%;
-  margin: 0 auto;
-  margin-bottom: 24px;
-  border-top: 1px solid #ecc7c0;
-}
-
 // NAVBAR
-
-.navbar {
-  padding: 0 400px;
+.nav {
+  position: sticky;
+  top: 0;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
   height: 60px;
-  background-color: #3c2e3d;
+  background-color: var(--secondary-color);
+  z-index: 1;
+
+  .nav-title {
+    align-self: flex-start;
+  }
+
+  .nav-items {
+    display: flex;
+  }
+
   a {
     height: 100%;
-    color: #fff;
+    color: var(--primary-color);
     display: flex;
     align-items: center;
+    text-decoration: none;
+    padding: 0 20px;
+
     &:hover {
-      color: #fff;
-      border-bottom: 1px solid #ecc7c0;
-      background-color: #3c2e3d;
+      color: var(--tertiary-color);
     }
   }
 }
 
 // HOME
-
 .home-section {
-  background-color: #3c2e3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
   height: 100vh;
-  padding-top: 17%;
-  .main {
-    height: 200px;
-    width: 30%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid #ecc7c0;
-    border-bottom: 1px solid #ecc7c0;
-    .title {
-      color: #fff;
-    }
-    .name {
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      margin-bottom: 10px !important;
-      font-weight: 200;
-    }
-    .role {
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 12px;
-      font-weight: 200;
-    }
+  color: var(--primary-color);
+  margin-top: -60px;
+
+  .main .title {
+    margin: 0;
+    font-size: 7vw;
+    padding: 50px;
   }
 }
 
 // ABOUT
-
 .about-section {
-  margin: 0 70px 100px 70px !important;
-  #profile-image {
-    display: block;
-    margin: 0 auto;
-    margin-top: 15px;
-    border-radius: 50%;
-  }
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+
   .bio {
-    min-height: 130px;
+    margin: 0;
     display: flex;
     align-items: center;
     text-align: justify;
-  }
-  .skills-section {
-    margin-top: 25px;
-    .skills-title {
-      letter-spacing: 2px;
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-    .skills {
-      font-size: 20px;
-      color: #9b9b9b;
-      word-spacing: 10px;
-      text-align: center;
-      height: 90px;
-    }
+    font-size: 4vw;
+    padding: 30px;
   }
 }
 
 // WORK
 
 .work-section {
+  overflow: hidden;
+
   .column {
     min-height: 50vh;
   }
@@ -185,6 +148,16 @@ hr {
     }
   }
 
+  .work-section {
+    display: flex;
+  }
+
+  .carousel-container,
+  .work-description {
+    width: 50vw;
+    overflow: hidden;
+  }
+
   .carousel {
     display: flex;
     width: max-content;
@@ -194,8 +167,13 @@ hr {
     margin: 100px 0;
 
     .slide {
-      width: 100vw;
-      padding: 0 200px;
+      display: flex;
+      width: 50vw;
+      padding: 0 20px;
+
+      img {
+        height: 200px;
+      }
     }
   }
 
@@ -211,16 +189,36 @@ hr {
 }
 
 //CONTACT
-
-.contact-links {
+.contact-section {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  .button {
-    margin: 0 10px;
-    border: 1px solid rgb(60, 46, 61);
-    transition: 0.3s ease;
-    &:hover {
-      transform: scale(1.03);
+  min-height: 300px;
+  background-color: var(--primary-color);
+
+  .contact-title {
+    margin: 0 0 20px 0;
+    color: var(--secondary-color);
+  }
+
+  .contact-links {
+    display: flex;
+
+    .button {
+      display: block;
+      margin: 0 10px;
+      padding: 10px 30px;
+      background-color: var(--secondary-color);
+      border: 1px solid var(--tertiary-color);
+      border-radius: 20px;
+      transition: 0.3s ease;
+      color: var(--tertiary-color);
+      text-decoration: none;
+
+      &:hover {
+        transform: scale(1.03);
+      }
     }
   }
 }
