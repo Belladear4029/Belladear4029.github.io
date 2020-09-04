@@ -6,6 +6,7 @@
   <title>Bella Dear | Web Developer London</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./js/app.js" charset="utf-8"></script>
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css?family=Didact+Gothic|Hind+Guntur:300,400|Hind+Madurai|Merriweather+Sans:300|Metrophobic|Montserrat:300|Nixie+One|Noto+Sans|Open+Sans:300"
     rel="stylesheet" />
@@ -16,11 +17,11 @@
 <body>
   <!-- nav -->
   <nav class="nav">
-    <a class="nav-title" href="#home">Bella Dear</a>
+    <a class="nav-title title" href="#home">Bella Dear</a>
     <div class="nav-items">
-      <a class="nav-item about-link" href="#about">About</a>
-      <a class="nav-item work-link" href="#work">Work</a>
-      <a class="nav-item contact-link" href="#contact">Contact</a>
+      <a class="nav-item title about-link" href="#about">About</a>
+      <a class="nav-item title work-link" href="#work">Work</a>
+      <a class="nav-item title contact-link" href="#contact">Contact</a>
     </div>
   </nav>
 
@@ -28,8 +29,8 @@
     <!-- home -->
     <section class="home-section" id="home">
       <div class="main">
-        <h1 class="title centered">
-          Born in New York, based in London. Bella is a software engineer with
+        <h1 class="title">
+          Born in New York, based in London. Bella is a software developer with
           a passion for cooking.
         </h1>
       </div>
@@ -37,28 +38,117 @@
 
     <!-- about -->
     <section class="about-section" id="about">
-      <h1 class="bio">
-        I am a software developer with 2 years of work experience and a degree
-        in Physiology from the University of Bristol. I am looking for a new
-        and exciting opportunity within a high growth organisation, using
-        current technologies, where I can bring my skill set to make an
-        impact. I currently work at Publicis Sapient working on the Nissan
-        account and have also worked on the RBS account since starting in
-        October 2018.
+      <h1 class="title bio">
+        I am a software developer with two years experience and a degree in
+        Physiology from the University of Bristol. I currently work at
+        Publicis Sapient and work on the Nissan account. I have also worked
+        with RBS since starting in October 2018.
       </h1>
     </section>
 
-    <!-- <img
-        src="https://imgur.com/RaT1jlI.png"
-        id="profile-image"
-        alt="profile"
-        width="250px"
-      /> -->
+    <section class="picture-section">
+      <div class="pin"></div>
+      <div class="profile-image">
+        <img src="https://imgur.com/RaT1jlI.png" alt="profile" width="250px" />
+      </div>
+    </section>
+
+    <section class="books-section">
+      <div class="shelf">
+        <div class="book xl">
+          <h1 class="title">JavaScript</h1>
+          <p class="category">lang</p>
+        </div>
+        <div class="book l">
+          <h1 class="title">HTML</h1>
+          <p class="category">lang</p>
+        </div>
+        <div class="book l">
+          <h1 class="title">CSS</h1>
+          <p class="category">lang</p>
+        </div>
+        <div class="book m">
+          <h1 class="title">jQuery</h1>
+          <p class="category">tech</p>
+        </div>
+        <div class="book l">
+          <h1 class="title">React.js</h1>
+          <p class="category">tech</p>
+        </div>
+        <div class="book m">
+          <h1 class="title">Redux</h1>
+          <p class="category">tech</p>
+        </div>
+      </div>
+      <div class="shelf">
+        <div class="book s">
+          <h1 class="title">Vue.js</h1>
+          <p class="category">tech</p>
+        </div>
+        <div class="book s">
+          <h1 class="title">Vuex</h1>
+          <p class="category">tech</p>
+        </div>
+        <div class="book s">
+          <h1 class="title">Angular.js</h1>
+          <p class="category">tech</p>
+        </div>
+        <div class="book xs">
+          <h1 class="title">Styled Components</h1>
+          <p class="category">tech</p>
+        </div>
+        <div class="book s">
+          <h1 class="title">Node.js</h1>
+          <p class="category">tech</p>
+        </div>
+        <div class="book xs">
+          <h1 class="title">Express</h1>
+          <p class="category">tech</p>
+        </div>
+        <div class="book xs">
+          <h1 class="title">MongoDB</h1>
+          <p class="category">tech</p>
+        </div>
+        <div class="book s">
+          <h1 class="title">Webpack</h1>
+          <p class="category">tech</p>
+        </div>
+        <div class="book xs">
+          <h1 class="title">Babel</h1>
+          <p class="category">tech</p>
+        </div>
+        <div class="book xs">
+          <h1 class="title">Jest</h1>
+          <p class="category">tech</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="other-books-section">
+      <div class="book">
+        <h1 class="title">Git</h1>
+        <p class="category">other</p>
+      </div>
+      <div class="book">
+        <h1 class="title">Github</h1>
+        <p class="category">other</p>
+      </div>
+      <div class="book">
+        <h1 class="title">Bitbucket</h1>
+        <p class="category">other</p>
+      </div>
+      <div class="book">
+        <h1 class="title">JIRA</h1>
+        <p class="category">other</p>
+      </div>
+    </section>
+
+    <section class="work-title">
+      <h1 class="title centered">Work</h1>
+    </section>
 
     <!-- work -->
     <section class="work-section" id="work">
-      <h1 class="centered">WORK</h1>
-
       <div class="ps-section">
         <h1 class="title centered">Publicis Sapient</h1>
         <div class="work-section">
@@ -72,6 +162,10 @@
                 <img src="./assets/CWMobile2.png" />
               </div>
             </div>
+            <!-- <div class="slide-selectors">
+                <p class="slide-selector button active">1</p>
+                <p class="slide-selector button">2</p>
+              </div> -->
           </div>
           <p class="work-description">
             My role has been to work within a team developing the Nissan
@@ -88,19 +182,8 @@
         </div>
       </div>
 
-
-      <!-- <div class="slide-selectors">
-        <p class="slide-selector button active">1</p>
-        <p class="slide-selector button">2</p>
-        <p class="slide-selector button">3</p>
-        <p class="slide-selector button">4</p>
-        <p class="slide-selector button">5</p>
-        <p class="slide-selector button">6</p>
-      </div> -->
-
       <h1 class="title centered">RBS - Credit Wallet</h1>
       <div class="carousel">
-
         <div class="slide">
           <p class="project-description">
             When I joined Publicis Sapient I started working on the RBS
@@ -158,33 +241,33 @@
           week | <strong>Project:</strong> Group
         </p>
         <br />
-        <section class="columns">
-          <div class="column is-half">
-            <p class="project-description">
-              This was a group project creating a full MEAN stack app using
-              our own API as well as others. For this app we wanted to make it
-              easy for a user to bundle their evening together by giving them
-              a selection of bars and restaurants near their chosen event;
-              acting as a tool to organise their evening conveniently for them
-              - Evening Angel. Firstly, we used Skiddle's API to return events
-              so the user can find and select the event they are going to. We
-              then used Google Places API to find nearby bars and restaurants
-              in relation to the chosen event's location, within a radius
-              chosen by the user. Once a 'bundle' is created, we provided a
-              travel time calculation from a given starting location using
-              Google Autocomplete and Citymapper's API.
-            </p>
-            <div class="project-links">
-              <a target="_blank" class="button" href="https://evening-angel.herokuapp.com/">Evening Angel</a>
-              <a target="_blank" class="button" href="https://github.com/Belladear4029/project-3-wdi">Github</a>
-            </div>
+
+        <div class="column is-half">
+          <p class="project-description">
+            This was a group project creating a full MEAN stack app using our
+            own API as well as others. For this app we wanted to make it easy
+            for a user to bundle their evening together by giving them a
+            selection of bars and restaurants near their chosen event; acting
+            as a tool to organise their evening conveniently for them -
+            Evening Angel. Firstly, we used Skiddle's API to return events so
+            the user can find and select the event they are going to. We then
+            used Google Places API to find nearby bars and restaurants in
+            relation to the chosen event's location, within a radius chosen by
+            the user. Once a 'bundle' is created, we provided a travel time
+            calculation from a given starting location using Google
+            Autocomplete and Citymapper's API.
+          </p>
+          <div class="project-links">
+            <a target="_blank" class="button" href="https://evening-angel.herokuapp.com/">Evening Angel</a>
+            <a target="_blank" class="button" href="https://github.com/Belladear4029/project-3-wdi">Github</a>
           </div>
-          <div class="column is-half images">
-            <img id="evening-angel-img" class="static" width="550px" src="https://imgur.com/rNzTL6g.png"
-              alt="evening-angel-screenshots" />
-            <img class="border active" width="301px" src="https://i.imgur.com/n1SoVo2.gif" alt="evening-angel-gif" />
-          </div>
-        </section>
+        </div>
+        <div class="column is-half images">
+          <img id="evening-angel-img" class="static" width="550px" src="https://imgur.com/rNzTL6g.png"
+            alt="evening-angel-screenshots" />
+          <img class="border active" width="301px" src="https://i.imgur.com/n1SoVo2.gif" alt="evening-angel-gif" />
+        </div>
+
         <hr />
       </div>
 
@@ -195,28 +278,28 @@
           week | <strong>Project:</strong> Individual
         </p>
         <br />
-        <section class="columns">
-          <div class="column is-half images">
-            <img class="static" width="550px" src="https://imgur.com/NqGMv3D.png" alt="instagrub-screenshots" />
-            <img class="border active" id="instagrub-gif" width="301px" src="https://imgur.com/xFhJ75O.gif"
-              alt="instagrub-gif" />
+
+        <div class="column is-half images">
+          <img class="static" width="550px" src="https://imgur.com/NqGMv3D.png" alt="instagrub-screenshots" />
+          <img class="border active" id="instagrub-gif" width="301px" src="https://imgur.com/xFhJ75O.gif"
+            alt="instagrub-gif" />
+        </div>
+        <div class="column is-half">
+          <p class="project-description">
+            I love cooking and wanted to create an app that would act like a
+            Instagram for food recipes. Users can login and scroll to find a
+            recipe that they like the look of, then click to see the
+            ingredients and method, or also add and share their own recipes. I
+            added features so users can comment and like recipes, therefore
+            budding chefs are able to share their signature dishes and recieve
+            feedback and love.
+          </p>
+          <div class="project-links">
+            <a target="_blank" class="button" href="https://instagrub-app.herokuapp.com/">Instagrub</a>
+            <a target="_blank" class="button" href="https://github.com/Belladear4029/project-2-wdi">Github</a>
           </div>
-          <div class="column is-half">
-            <p class="project-description">
-              I love cooking and wanted to create an app that would act like a
-              Instagram for food recipes. Users can login and scroll to find a
-              recipe that they like the look of, then click to see the
-              ingredients and method, or also add and share their own recipes.
-              I added features so users can comment and like recipes,
-              therefore budding chefs are able to share their signature dishes
-              and recieve feedback and love.
-            </p>
-            <div class="project-links">
-              <a target="_blank" class="button" href="https://instagrub-app.herokuapp.com/">Instagrub</a>
-              <a target="_blank" class="button" href="https://github.com/Belladear4029/project-2-wdi">Github</a>
-            </div>
-          </div>
-        </section>
+        </div>
+
         <hr />
       </div>
 
@@ -228,40 +311,37 @@
           <strong>Project:</strong> Individual
         </p>
         <br />
-        <section class="columns">
-          <div class="column is-half">
-            <p class="project-description">
-              I created a similar styled game to 'Guitar Hero' and 'Tap Tap
-              Revenge', with the aim of the game being to tap different keys
-              in sync with when balls coming up the page come into contact
-              with targets at the top, all in time with music. This game was
-              made using HTML, CSS and Javascript using the jQuery Library.
-            </p>
-            <div class="project-links">
-              <a target="_blank" class="button" href="https://belladear4029.github.io/project-1-wdi/">Tap Tap</a>
-              <a target="_blank" class="button" href="https://github.com/Belladear4029/project-1-wdi">Github</a>
-            </div>
+
+        <div class="column is-half">
+          <p class="project-description">
+            I created a similar styled game to 'Guitar Hero' and 'Tap Tap
+            Revenge', with the aim of the game being to tap different keys in
+            sync with when balls coming up the page come into contact with
+            targets at the top, all in time with music. This game was made
+            using HTML, CSS and Javascript using the jQuery Library.
+          </p>
+          <div class="project-links">
+            <a target="_blank" class="button" href="https://belladear4029.github.io/project-1-wdi/">Tap Tap</a>
+            <a target="_blank" class="button" href="https://github.com/Belladear4029/project-1-wdi">Github</a>
           </div>
-          <div class="column is-half images">
-            <img class="static" width="550px" src="https://imgur.com/bCJWQNQ.png" alt="tap-tap-screenshots" />
-            <img class="active" id="tap-tap-gif" width="300px" src="https://i.imgur.com/qdHFYd8.gif"
-              alt="tap-tap-gif" />
-          </div>
-        </section>
+        </div>
+        <div class="column is-half images">
+          <img class="static" width="550px" src="https://imgur.com/bCJWQNQ.png" alt="tap-tap-screenshots" />
+          <img class="active" id="tap-tap-gif" width="300px" src="https://i.imgur.com/qdHFYd8.gif" alt="tap-tap-gif" />
+        </div>
       </div>
     </section>
 
     <!-- contact -->
-    <div class="container">
-      <section class="contact-section" id="contact">
-        <h1 class="contact-title centered">Let's talk...</h1>
-        <div class="contact-links">
-          <a class="button" href="mailto:arabellamdear@gmail.com">Email Me</a>
-          <a class="button" href="https://www.linkedin.com/in/belladear/">My LinkedIn</a>
-          <a class="button" href="https://github.com/Belladear4029">My Github</a>
-        </div>
-      </section>
-    </div>
+    <section class="contact-section" id="contact">
+      <h1 class="contact-title centered">Let's talk...</h1>
+      <div class="contact-links">
+        <a class="button" href="mailto:arabellamdear@gmail.com">Email Me</a>
+        <a class="button" href="https://www.linkedin.com/in/belladear/">My LinkedIn</a>
+        <a class="button" href="https://github.com/Belladear4029">My Github</a>
+      </div>
+    </section>
+
   </main>
 </body>
 
