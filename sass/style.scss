@@ -93,8 +93,8 @@ section {
     width: 24px;
     height: 24px;
     border-radius: 100%;
-    border: 4px solid var(--primary-color);
-    margin-left: 113px
+    border: 4px solid var(--dark-grey);
+    margin-left: 113px;
   }
 
   .profile-image {
@@ -106,7 +106,7 @@ section {
     img {
       align-self: flex-end;
       border-radius: 100%;
-      border: 4px solid var(--primary-color);
+      border: 4px solid var(--dark-grey);
     }
 
     &::before {
@@ -114,7 +114,7 @@ section {
       display: block;
       height: 160px;
       width: 4px;
-      background: var(--primary-color);
+      background: var(--dark-grey);
       position: absolute;
       transform: rotate(37deg);
       left: 65px;
@@ -126,7 +126,7 @@ section {
       display: block;
       height: 160px;
       width: 4px;
-      background: var(--primary-color);
+      background: var(--dark-grey);
       position: absolute;
       transform: rotate(-37deg);
       right: 65px;
@@ -280,17 +280,17 @@ section {
             transform: rotate(27deg);
             margin: 0 8px;
           }
-    
+
           &:nth-child(2) {
             transform: rotate(24deg);
             margin: 0 8px;
           }
-    
+
           &:nth-child(3) {
             transform: rotate(20deg);
             margin: 0 10px;
           }
-    
+
           &:nth-child(4) {
             transform: rotate(17deg);
             margin: 0;
@@ -310,40 +310,123 @@ section {
   }
 }
 
-.other-books-section {
-  padding-top: 100px;
-  padding-bottom: 100px;
+.cooker-section {
+  display: flex;
 
-  .book {
-    &:nth-child(even) {
+  .cooker-container {
+    width: 50%;
+
+    .cooker-title {
+      text-align: center;
+    }
+
+    .cooker {
+      display: flex;
+      flex-wrap: wrap;
       background: var(--primary-color);
+      border: 4px solid var(--dark-grey);
+    }
 
-      .title,
-      .category {
-        color: var(--secondary-color);
+    .stove-container {
+      width: 50%;
+      padding: 20px;
+
+      .stove {
+        position: relative;
+        height: 0;
+        padding-top: 100%;
+        border-radius: 100%;
+        background: var(--secondary-color);
+        color: var(--primary-color);
+        border: 4px solid var(--dark-grey);
+
+        .title {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -100%);
+        }
       }
     }
 
-    &:nth-child(1) {
-      width: 37%;
-    }
+    .cooker-dials {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 60px;
+      height: 30px;
+      width: 80%;
+      background: var(--primary-color);
+      border-radius: 5px;
+      margin: 15px auto 0;
 
-    &:nth-child(2) {
-      width: 44%;
-    }
+      .dial {
+        position: relative;
+        height: 15px;
+        width: 15px;
+        border-radius: 100%;
+        background: var(--secondary-color);
 
-    &:nth-child(3) {
-      width: 42%;
+        &::before {
+          content: "";
+          display: block;
+          height: 10px;
+          width: 4px;
+          background: var(--dark-grey);
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
     }
+  }
 
-    &:nth-child(4) {
-      width: 47%;
-    }
+  .pans {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
-    .category {
-      transform: rotate(-90deg);
-      right: 0;
-      bottom: auto;
+    .pan {
+      position: relative;
+      height: 100px;
+      width: 100px;
+      border-radius: 100%;
+      background: var(--primary-color);
+
+      &::before {
+        content: "";
+        display: block;
+        height: 100px;
+        width: 20px;
+        background: var(--primary-color);
+        position: absolute;
+        top: -90%;
+        border-radius: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:nth-child(2) {
+        width: 150px;
+        height: 150px;
+
+        &::before {
+          height: 150px;
+          width: 30px;
+        }
+      }
+
+      &:nth-child(3) {
+        height: 90px;
+        width: 90px;
+
+        &::before {
+          top: -100%;
+          height: 150px;
+          width: 10px;
+        }
+      }
     }
   }
 }
