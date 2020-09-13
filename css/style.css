@@ -406,9 +406,13 @@ section:nth-child(even) {
 .work-section .work-description {
   padding: 0 15px;
 }
+.work-section .work-description p {
+  line-height: 1.5;
+}
 .work-section .carousel-container {
   background: var(--white);
   border: 4px solid var(--dark-grey);
+  height: 48vh;
 }
 .work-section .carousel {
   display: flex;
@@ -422,11 +426,12 @@ section:nth-child(even) {
 .work-section .carousel .slide {
   display: flex;
   justify-content: space-evenly;
-  width: 40vw;
-  padding: 0 15px;
+  width: 38.5vw;
+  height: 100%;
+  padding: 15px;
 }
 .work-section .carousel .slide img {
-  height: 200px;
+  max-height: 100%;
 }
 .work-section .slide-selectors {
   display: flex;

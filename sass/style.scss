@@ -461,11 +461,16 @@ section {
 
   .work-description {
     padding: 0 15px;
+
+    p {
+      line-height: 1.5;
+    }
   }
 
   .carousel-container {
     background: var(--white);
     border: 4px solid var(--dark-grey);
+    height: 48vh;
   }
 
   .carousel {
@@ -480,11 +485,12 @@ section {
     .slide {
       display: flex;
       justify-content: space-evenly;
-      width: 40vw;
-      padding: 0 15px;
+      width: 38.5vw;
+      height: 100%;
+      padding: 15px;
 
       img {
-        height: 200px;
+        max-height: 100%;
       }
     }
   }
