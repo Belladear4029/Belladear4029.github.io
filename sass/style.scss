@@ -435,6 +435,16 @@ section {
 .work-section {
   overflow: hidden;
 
+  .project {
+    &:not(:first-child) {
+      margin: 100px 0;
+    }
+
+    &:nth-child(odd) .content {
+      flex-direction: row-reverse;
+    }
+  }
+
   .work-title .title {
     color: var(--secondary-color);
   }
@@ -451,7 +461,7 @@ section {
 
   .work-description {
     padding: 0 15px;
-  } 
+  }
 
   .carousel-container {
     background: var(--white);

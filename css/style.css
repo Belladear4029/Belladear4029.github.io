@@ -386,6 +386,12 @@ section:nth-child(even) {
 .work-section {
   overflow: hidden;
 }
+.work-section .project:not(:first-child) {
+  margin: 100px 0;
+}
+.work-section .project:nth-child(odd) .content {
+  flex-direction: row-reverse;
+}
 .work-section .work-title .title {
   color: var(--secondary-color);
 }
