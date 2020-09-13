@@ -4,6 +4,7 @@ $(() => {
   let slideCount;
   let carouselPosition = 0;
   let $activeCarousel;
+  const $carouselContainer = $(".carousel-container");
   const $carousel = $(".carousel");
   const $slideSelectors = $(".slide-selectors");
   const $slideSelector = $(".slide-selector");
@@ -31,7 +32,7 @@ $(() => {
   const setCarouselPosition = (position) => {
     const threshold = 100;
 
-    if (-(slideCount - 1) * (window.innerWidth/2) - threshold < position && position < threshold) {
+    if (-(slideCount - 1) * (window.innerWidth * 0.4) - threshold < position && position < threshold) {
       $activeCarousel.style.transform = `translateX(${position}px)`;
     }
   };
@@ -43,19 +44,21 @@ $(() => {
   }
 
   const setSelectedSlideIndex = (slideIndex) => {
+    setSlideCount();
+
     if (0 <= slideIndex && slideIndex < slideCount) {
       selectedSlideIndex = slideIndex;
     }
 
-    carouselPosition = -selectedSlideIndex * (window.innerWidth/2);
-    setCarouselPosition(-selectedSlideIndex * (window.innerWidth/2));
+    carouselPosition = -selectedSlideIndex * (window.innerWidth * 0.4);
+    setCarouselPosition(-selectedSlideIndex * (window.innerWidth * 0.4));
 
     if (slideSelectors) {
       setActiveStates(slideIndex);
     }
   };
 
-  $slideSelector.on("click", function (event) {
+  $slideSelector.click(function (event) {
     const slideIndex = Array.from(event.target.parentNode.children).indexOf(event.target);
     setSelectedSlideIndex(slideIndex);
   });
@@ -84,12 +87,15 @@ $(() => {
   $carousel.mousedown(function(event) {
     const exisitingPosition = $(this)[0].style.transform.replace(/[^\d.]/g, '');
     $activeCarousel = $(this)[0];
-    setSlideCount();
-    setSelectedSlideIndex(+exisitingPosition / (window.innerWidth/2))
+    setSelectedSlideIndex(+exisitingPosition / (window.innerWidth * 0.4))
     $activeCarousel.style.transition = 'none';
     startingPosition = event.screenX;
     mouseIsDown = true;
   });
+
+  $carouselContainer.mousedown(function(event) {
+    $activeCarousel = $(this).find($carousel)[0];
+  })
 
   $carousel.mousemove(function (event) {
     if (mouseIsDown) {
