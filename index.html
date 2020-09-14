@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
   <title>Bella Dear | Web Developer London</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./js/app.js" charset="utf-8"></script>
@@ -40,7 +41,7 @@
     <section class="about-section" id="about">
       <h1 class="title bio">
         I am a software developer with two years experience and a degree in
-        Physiology from the University of Bristol. After completing the Software Development Immersive course at General
+        Physiology from the University of Bristol. After completing the Web Development Immersive course at General
         Assembly, I joined Publicis Sapient where I have since worked on the RBS and Nissan account.
       </h1>
     </section>
@@ -53,79 +54,82 @@
     </section>
 
     <section class="books-section">
-      <div class="shelf">
-        <div class="book xl">
-          <h1 class="title">JavaScript</h1>
-          <p class="category">lang</p>
+      <h1 class="book-title centered">Skills</h1>
+      <div class="shelves">
+        <div class="shelf">
+          <div class="book xl">
+            <h1 class="title">JavaScript</h1>
+            <p class="category">lang</p>
+          </div>
+          <div class="book l">
+            <h1 class="title">HTML</h1>
+            <p class="category">lang</p>
+          </div>
+          <div class="book l">
+            <h1 class="title">CSS</h1>
+            <p class="category">lang</p>
+          </div>
+          <div class="book m">
+            <h1 class="title">jQuery</h1>
+            <p class="category">tech</p>
+          </div>
+          <div class="book l">
+            <h1 class="title">React.js</h1>
+            <p class="category">tech</p>
+          </div>
+          <div class="book m">
+            <h1 class="title">Redux</h1>
+            <p class="category">tech</p>
+          </div>
         </div>
-        <div class="book l">
-          <h1 class="title">HTML</h1>
-          <p class="category">lang</p>
-        </div>
-        <div class="book l">
-          <h1 class="title">CSS</h1>
-          <p class="category">lang</p>
-        </div>
-        <div class="book m">
-          <h1 class="title">jQuery</h1>
-          <p class="category">tech</p>
-        </div>
-        <div class="book l">
-          <h1 class="title">React.js</h1>
-          <p class="category">tech</p>
-        </div>
-        <div class="book m">
-          <h1 class="title">Redux</h1>
-          <p class="category">tech</p>
-        </div>
-      </div>
-      <div class="shelf">
-        <div class="book s">
-          <h1 class="title">Vue.js</h1>
-          <p class="category">tech</p>
-        </div>
-        <div class="book s">
-          <h1 class="title">Vuex</h1>
-          <p class="category">tech</p>
-        </div>
-        <div class="book s">
-          <h1 class="title">Angular.js</h1>
-          <p class="category">tech</p>
-        </div>
-        <div class="book xs">
-          <h1 class="title">Styled Components</h1>
-          <p class="category">tech</p>
-        </div>
-        <div class="book s">
-          <h1 class="title">Node.js</h1>
-          <p class="category">tech</p>
-        </div>
-        <div class="book xs">
-          <h1 class="title">Express</h1>
-          <p class="category">tech</p>
-        </div>
-        <div class="book xs">
-          <h1 class="title">MongoDB</h1>
-          <p class="category">tech</p>
-        </div>
-        <div class="book s">
-          <h1 class="title">Webpack</h1>
-          <p class="category">tech</p>
-        </div>
-        <div class="book xs">
-          <h1 class="title">Babel</h1>
-          <p class="category">tech</p>
-        </div>
-        <div class="book xs">
-          <h1 class="title">Jest</h1>
-          <p class="category">tech</p>
+        <div class="shelf">
+          <div class="book s">
+            <h1 class="title">Vue.js</h1>
+            <p class="category">tech</p>
+          </div>
+          <div class="book s">
+            <h1 class="title">Vuex</h1>
+            <p class="category">tech</p>
+          </div>
+          <div class="book s">
+            <h1 class="title">Angular.js</h1>
+            <p class="category">tech</p>
+          </div>
+          <div class="book xs">
+            <h1 class="title">Styled Components</h1>
+            <p class="category">tech</p>
+          </div>
+          <div class="book s">
+            <h1 class="title">Node.js</h1>
+            <p class="category">tech</p>
+          </div>
+          <div class="book xs">
+            <h1 class="title">Express</h1>
+            <p class="category">tech</p>
+          </div>
+          <div class="book xs">
+            <h1 class="title">MongoDB</h1>
+            <p class="category">tech</p>
+          </div>
+          <div class="book s">
+            <h1 class="title">Webpack</h1>
+            <p class="category">tech</p>
+          </div>
+          <div class="book xs">
+            <h1 class="title">Babel</h1>
+            <p class="category">tech</p>
+          </div>
+          <div class="book xs">
+            <h1 class="title">Jest</h1>
+            <p class="category">tech</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="cooker-section">
+    <section class="cooker-section wrap reverse">
       <div class="cooker-container">
-        <h1 class="cooker-title">Others</h1>
+        <h1 class="cooker-title centered">Others</h1>
         <div class="cooker">
           <div class="stove-container">
             <div class="stove">
@@ -157,9 +161,9 @@
       </div>
 
       <div class="pans">
-        <div class="pan"></div>
-        <div class="pan"></div>
-        <div class="pan"></div>
+        <div class="handle"><span class="pan"></span></div>
+        <div class="handle"><span class="pan"></span></div>
+        <div class="handle"><span class="pan"></span></div>
       </div>
     </section>
 
@@ -171,7 +175,7 @@
     <section class="work-section" id="work">
       <div class="project">
         <h1 class="title centered">Publicis Sapient</h1>
-        <div class="content">
+        <div class="content wrap">
           <div class="carousel-container">
             <div class="carousel">
               <div class="slide">
@@ -216,7 +220,7 @@
 
       <div class="project">
         <h1 class="title centered">Luckington</h1>
-        <div class="content">
+        <div class="content wrap">
           <div class="carousel-container">
             <div class="carousel">
               <div class="slide">
@@ -238,8 +242,8 @@
           </div>
           <div class="work-description">
             <p>
-              This is a website for a regenerative farming enterprise. I built the website from scratch using Vue.js as the
-              framework and Netlify to deploy it. Pending deployment.
+              This is a website for a regenerative farming enterprise. I built the website from scratch using Vue.js as
+              the framework and Netlify to deploy it. Pending deployment.
             </p>
           </div>
         </div>
@@ -247,7 +251,7 @@
 
       <div class="project">
         <h1 class="title centered">Sapling Spirits</h1>
-        <div class="content">
+        <div class="content wrap">
           <div class="carousel-container">
             <div class="carousel">
               <div class="slide">
@@ -283,7 +287,7 @@
 
       <div class="project">
         <h1 class="title centered">The Spice Drawer</h1>
-        <div class="content">
+        <div class="content wrap">
           <div class="carousel-container">
             <div class="carousel">
               <div class="slide">
@@ -310,9 +314,10 @@
               recipes and building to the functionality. My idea was to start lean and form a very simple website where
               I can just view my favourite recipes where I have simplified their methods and made a few tweaks. To build
               the front-end I have used Vue.js and Node.js for the back-end which hooks up to a Firebase Realtime
-              Database. This allows me to add recipes on the go from anywhere. Then finally I am using Netlify for the deployment.
+              Database. This allows me to add recipes on the go from anywhere. Then finally I am using Netlify for the
+              deployment.
             </p>
-            <a href="https://www.thespicedrawer.co.uk" target="_blank">www.thespicedrawer.co.uk</a>
+            <a class="centered" href="https://www.thespicedrawer.co.uk" target="_blank">www.thespicedrawer.co.uk</a>
           </div>
         </div>
       </div>
@@ -321,11 +326,17 @@
     <!-- contact -->
     <section class="contact-section" id="contact">
       <h1 class="contact-title centered">Let's talk...</h1>
-      <div class="contact-links">
-        <a class="button" href="mailto:arabellamdear@gmail.com">Email Me</a>
-        <a class="button" href="https://www.linkedin.com/in/belladear/">My LinkedIn</a>
-        <a class="button" href="https://github.com/Belladear4029">My Github</a>
-      </div>
+      <ul class="contact-links">
+        <li class="link">
+          <a href="mailto:arabelladear@hotmail.co.uk">arabelladear@hotmail.co.uk</a>
+        </li>
+        <li class="link">
+          <a href="https://www.linkedin.com/in/belladear/">LinkedIn</a>
+        </li>
+        <li class="link">
+          <a href="https://github.com/Belladear4029">Github</a>
+        </li>
+      </ul>
     </section>
   </main>
 </body>

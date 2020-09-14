@@ -3,6 +3,7 @@ $(() => {
   let selectedSlideIndex = 0;
   let slideCount;
   let carouselPosition = 0;
+  let carouselWidth;
   let $activeCarousel;
   let $slideSelectors = $(".slide-selectors");
   const $carouselContainer = $(".carousel-container");
@@ -21,8 +22,19 @@ $(() => {
   });
 
   window.addEventListener('resize', function (event) {
+    setCarouselWidth();
     setSelectedSlideIndex(selectedSlideIndex);
   });
+
+  const setCarouselWidth = () => {
+    if (window.innerWidth > 750) {
+      carouselWidth = window.innerWidth * 0.385;
+    } else {
+      carouselWidth = window.innerWidth * 0.8;
+    }
+  }
+
+  setCarouselWidth();
 
   const setSlideCount = () => {
     slideCount = $activeCarousel && $activeCarousel.children.length;
@@ -31,7 +43,7 @@ $(() => {
   const setCarouselPosition = (position) => {
     const threshold = 100;
 
-    if (-(slideCount - 1) * (window.innerWidth * 0.385) - threshold < position && position < threshold) {
+    if (-(slideCount - 1) * carouselWidth - threshold < position && position < threshold) {
       $activeCarousel.style.transform = `translateX(${position}px)`;
     }
   };
@@ -49,8 +61,8 @@ $(() => {
       selectedSlideIndex = slideIndex;
     }
 
-    carouselPosition = -selectedSlideIndex * (window.innerWidth * 0.385);
-    setCarouselPosition(-selectedSlideIndex * (window.innerWidth * 0.385));
+    carouselPosition = -selectedSlideIndex * carouselWidth;
+    setCarouselPosition(-selectedSlideIndex * carouselWidth);
 
     if (slideSelectors) {
       setActiveStates(slideIndex);
@@ -85,7 +97,7 @@ $(() => {
 
   $carousel.mousedown(function(event) {
     const exisitingPosition = $(this)[0].style.transform.replace(/[^\d.]/g, '');
-    const selectedSlideIndex = Math.round(+exisitingPosition / (window.innerWidth * 0.385));
+    const selectedSlideIndex = Math.round(+exisitingPosition / carouselWidth);
     $activeCarousel = $(this)[0];
     setSelectedSlideIndex(selectedSlideIndex)
     $activeCarousel.style.transition = 'none';

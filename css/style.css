@@ -63,7 +63,23 @@ section:nth-child(even) {
 }
 
 .centered {
+  display: block;
   text-align: center;
+}
+
+.wrap {
+  display: flex;
+}
+@media only screen and (max-width: 750px) {
+  .wrap {
+    flex-wrap: wrap;
+  }
+  .wrap > * {
+    width: 100% !important;
+  }
+  .wrap.reverse {
+    flex-direction: column-reverse;
+  }
 }
 
 .nav {
@@ -109,13 +125,14 @@ section:nth-child(even) {
   height: 24px;
   border-radius: 100%;
   border: 4px solid var(--dark-grey);
-  margin-left: 113px;
+  margin: auto;
 }
 .picture-section .profile-image {
   position: relative;
   display: flex;
   height: 300px;
   width: fit-content;
+  margin: auto;
 }
 .picture-section .profile-image img {
   align-self: flex-end;
@@ -186,10 +203,15 @@ section:nth-child(even) {
 }
 
 .books-section {
+  padding: 10px 0 0;
+}
+.books-section .book-title {
+  color: var(--secondary-color);
+}
+.books-section .shelves {
   display: flex;
   flex-wrap: wrap;
-  min-height: 645px;
-  padding: 100px 0 0;
+  min-height: 625px;
 }
 .books-section .shelf {
   display: flex;
@@ -283,9 +305,7 @@ section:nth-child(even) {
 }
 .cooker-section .cooker-container {
   width: 50%;
-}
-.cooker-section .cooker-container .cooker-title {
-  text-align: center;
+  padding: 0 20px;
 }
 .cooker-section .cooker-container .cooker {
   display: flex;
@@ -311,6 +331,12 @@ section:nth-child(even) {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -100%);
+  font-size: 2vw;
+}
+@media only screen and (max-width: 750px) {
+  .cooker-section .cooker-container .stove-container .stove .title {
+    font-size: 4vw;
+  }
 }
 .cooker-section .cooker-container .cooker-dials {
   display: flex;
@@ -341,46 +367,76 @@ section:nth-child(even) {
   transform: translateX(-50%);
 }
 .cooker-section .pans {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.cooker-section .pans .pan {
   position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 50%;
+  margin-top: 68px;
+}
+@media only screen and (max-width: 750px) {
+  .cooker-section .pans {
+    margin: 0 0 100px;
+  }
+}
+.cooker-section .pans::before {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 20px;
+  background: var(--tertiary-color);
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+}
+.cooker-section .pans .handle {
+  position: relative;
+  height: 100px;
+  width: 20px;
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+.cooker-section .pans .handle::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  background: var(--secondary-color);
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  border-radius: 100%;
+  transform: translateX(-50%);
+}
+.cooker-section .pans .handle .pan {
   height: 100px;
   width: 100px;
   border-radius: 100%;
   background: var(--primary-color);
-}
-.cooker-section .pans .pan::before {
-  content: "";
-  display: block;
-  height: 100px;
-  width: 20px;
-  background: var(--primary-color);
   position: absolute;
-  top: -90%;
-  border-radius: 10px;
+  top: 80%;
   left: 50%;
   transform: translateX(-50%);
 }
-.cooker-section .pans .pan:nth-child(2) {
-  width: 150px;
+.cooker-section .pans .handle:nth-child(2) {
   height: 150px;
 }
-.cooker-section .pans .pan:nth-child(2)::before {
-  height: 150px;
-  width: 30px;
+.cooker-section .pans .handle:nth-child(2) .pan {
+  width: 120px;
+  height: 120px;
 }
-.cooker-section .pans .pan:nth-child(3) {
+.cooker-section .pans .handle:nth-child(3) {
+  height: 150px;
+  width: 15px;
+}
+.cooker-section .pans .handle:nth-child(3) .pan {
   height: 90px;
   width: 90px;
 }
-.cooker-section .pans .pan:nth-child(3)::before {
-  top: -100%;
-  height: 150px;
-  width: 10px;
+
+.work-title .title {
+  font-size: 50px;
+  color: var(--secondary-color);
 }
 
 .work-section {
@@ -389,11 +445,14 @@ section:nth-child(even) {
 .work-section .project:not(:first-child) {
   margin: 100px 0;
 }
+.work-section .project:nth-child(even) .work-description {
+  padding-left: 30px;
+}
 .work-section .project:nth-child(odd) .content {
   flex-direction: row-reverse;
 }
-.work-section .work-title .title {
-  color: var(--secondary-color);
+.work-section .project:nth-child(odd) .content .work-description {
+  padding-right: 30px;
 }
 .work-section .content {
   display: flex;
@@ -403,16 +462,21 @@ section:nth-child(even) {
   width: 50vw;
   overflow: hidden;
 }
-.work-section .work-description {
-  padding: 0 15px;
-}
 .work-section .work-description p {
   line-height: 1.5;
+}
+.work-section .work-description a {
+  color: var(--tertiary-color);
 }
 .work-section .carousel-container {
   background: var(--white);
   border: 4px solid var(--dark-grey);
   height: 48vh;
+}
+@media only screen and (max-width: 750px) {
+  .work-section .carousel-container {
+    height: 30vh;
+  }
 }
 .work-section .carousel {
   display: flex;
@@ -429,6 +493,11 @@ section:nth-child(even) {
   width: 38.5vw;
   height: 100%;
   padding: 15px;
+}
+@media only screen and (max-width: 750px) {
+  .work-section .carousel .slide {
+    width: 80vw;
+  }
 }
 .work-section .carousel .slide img {
   max-height: 100%;
@@ -462,21 +531,16 @@ section:nth-child(even) {
   color: var(--secondary-color);
 }
 .contact-section .contact-links {
-  display: flex;
+  width: 100%;
 }
-.contact-section .contact-links .button {
-  display: block;
-  margin: 0 10px;
-  padding: 10px 30px;
-  background-color: var(--secondary-color);
-  border: 1px solid var(--tertiary-color);
-  border-radius: 20px;
-  transition: 0.3s ease;
+.contact-section .contact-links .link {
+  margin: 10px 0;
   color: var(--tertiary-color);
-  text-decoration: none;
 }
-.contact-section .contact-links .button:hover {
-  transform: scale(1.03);
+.contact-section .contact-links .link a {
+  font-size: 20px;
+  color: var(--secondary-color);
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

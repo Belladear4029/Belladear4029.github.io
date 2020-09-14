@@ -39,7 +39,24 @@ section {
 }
 
 .centered {
+  display: block;
   text-align: center;
+}
+
+.wrap {
+  display: flex;
+
+  @media only screen and (max-width: 750px) {
+    flex-wrap: wrap;
+
+    & > * {
+      width: 100% !important;
+    }
+
+    &.reverse {
+      flex-direction: column-reverse;
+    }
+  }
 }
 
 // NAVBAR
@@ -94,7 +111,7 @@ section {
     height: 24px;
     border-radius: 100%;
     border: 4px solid var(--dark-grey);
-    margin-left: 113px;
+    margin: auto;
   }
 
   .profile-image {
@@ -102,6 +119,7 @@ section {
     display: flex;
     height: 300px;
     width: fit-content;
+    margin: auto;
 
     img {
       align-self: flex-end;
@@ -186,10 +204,17 @@ section {
 }
 
 .books-section {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 645px;
-  padding: 100px 0 0;
+  padding: 10px 0 0;
+
+  .book-title {
+    color: var(--secondary-color);
+  }
+
+  .shelves {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 625px;
+  }
 
   .shelf {
     display: flex;
@@ -315,10 +340,7 @@ section {
 
   .cooker-container {
     width: 50%;
-
-    .cooker-title {
-      text-align: center;
-    }
+    padding: 0 20px;
 
     .cooker {
       display: flex;
@@ -345,6 +367,11 @@ section {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -100%);
+          font-size: 2vw;
+
+          @media only screen and (max-width: 750px) {
+            font-size: 4vw;
+          }
         }
       }
     }
@@ -382,49 +409,75 @@ section {
   }
 
   .pans {
-    width: 50%;
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-top: 68px;
 
-    .pan {
+    @media only screen and (max-width: 750px) {
+      margin: 0 0 100px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 80%;
+      height: 20px;
+      background: var(--tertiary-color);
+      position: absolute;
+      top: 0;
+      border-radius: 5px;
+    }
+
+    .handle {
       position: relative;
       height: 100px;
-      width: 100px;
-      border-radius: 100%;
+      width: 20px;
       background: var(--primary-color);
+      border-radius: 5px;
 
       &::before {
         content: "";
         display: block;
+        width: 5px;
+        height: 5px;
+        background: var(--secondary-color);
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        border-radius: 100%;
+        transform: translateX(-50%);
+      }
+
+      .pan {
         height: 100px;
-        width: 20px;
+        width: 100px;
+        border-radius: 100%;
         background: var(--primary-color);
         position: absolute;
-        top: -90%;
-        border-radius: 10px;
+        top: 80%;
         left: 50%;
         transform: translateX(-50%);
       }
 
       &:nth-child(2) {
-        width: 150px;
         height: 150px;
 
-        &::before {
-          height: 150px;
-          width: 30px;
+        .pan {
+          width: 120px;
+          height: 120px;
         }
       }
 
       &:nth-child(3) {
-        height: 90px;
-        width: 90px;
+        height: 150px;
+        width: 15px;
 
-        &::before {
-          top: -100%;
-          height: 150px;
-          width: 10px;
+        .pan {
+          height: 90px;
+          width: 90px;
         }
       }
     }
@@ -432,6 +485,11 @@ section {
 }
 
 // WORK
+.work-title .title {
+  font-size: 50px;
+  color: var(--secondary-color);
+}
+
 .work-section {
   overflow: hidden;
 
@@ -440,13 +498,19 @@ section {
       margin: 100px 0;
     }
 
+    &:nth-child(even) {
+      .work-description {
+        padding-left: 30px;
+      }
+    }
+
     &:nth-child(odd) .content {
       flex-direction: row-reverse;
-    }
-  }
 
-  .work-title .title {
-    color: var(--secondary-color);
+      .work-description {
+        padding-right: 30px;
+      }
+    }
   }
 
   .content {
@@ -460,10 +524,12 @@ section {
   }
 
   .work-description {
-    padding: 0 15px;
-
     p {
       line-height: 1.5;
+    }
+
+    a {
+      color: var(--tertiary-color);
     }
   }
 
@@ -471,6 +537,10 @@ section {
     background: var(--white);
     border: 4px solid var(--dark-grey);
     height: 48vh;
+
+    @media only screen and (max-width: 750px) {
+      height: 30vh;
+    }
   }
 
   .carousel {
@@ -488,6 +558,10 @@ section {
       width: 38.5vw;
       height: 100%;
       padding: 15px;
+
+      @media only screen and (max-width: 750px) {
+        width: 80vw;
+      }
 
       img {
         max-height: 100%;
@@ -529,21 +603,16 @@ section {
   }
 
   .contact-links {
-    display: flex;
+    width: 100%;
 
-    .button {
-      display: block;
-      margin: 0 10px;
-      padding: 10px 30px;
-      background-color: var(--secondary-color);
-      border: 1px solid var(--tertiary-color);
-      border-radius: 20px;
-      transition: 0.3s ease;
+    .link {
+      margin: 10px 0;
       color: var(--tertiary-color);
-      text-decoration: none;
 
-      &:hover {
-        transform: scale(1.03);
+      a {
+        font-size: 20px;
+        color: var(--secondary-color);
+        text-decoration: none;
       }
     }
   }
