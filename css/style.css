@@ -484,11 +484,11 @@ section:nth-child(even) {
 .work-section .carousel-container {
   background: var(--white);
   border: 4px solid var(--dark-grey);
-  height: 48vh;
+  height: 25vw;
 }
 @media only screen and (max-width: 750px) {
   .work-section .carousel-container {
-    height: 30vh;
+    height: 50vw;
   }
 }
 .work-section .carousel {
