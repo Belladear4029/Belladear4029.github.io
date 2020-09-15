@@ -8,7 +8,6 @@ $(() => {
   let $slideSelectors = $(".slide-selectors");
   const $carouselContainer = $(".carousel-container");
   const $carousel = $(".carousel");
-  const slideSelectors = $slideSelectors && Array.from($slideSelectors[0].children);
 
   $(document).on("click", 'a[href^="#"]', function (event) {
     event.preventDefault();
@@ -30,7 +29,7 @@ $(() => {
     if (window.innerWidth > 750) {
       carouselWidth = window.innerWidth * 0.385;
     } else {
-      carouselWidth = window.innerWidth * 0.8;
+      carouselWidth = window.innerWidth * 0.77;
     }
   }
 
@@ -49,6 +48,7 @@ $(() => {
   };
 
   const setActiveStates = (slideIndex) => {
+    const slideSelectors = Array.from($slideSelectors[0].children);
     slideSelectors.forEach(slideSelector => slideSelector.classList.remove('active'))
     const selectedSlideSelector = slideSelectors.find((slideSelector, i) => i === slideIndex)
     selectedSlideSelector.classList.add('active');
@@ -64,7 +64,7 @@ $(() => {
     carouselPosition = -selectedSlideIndex * carouselWidth;
     setCarouselPosition(-selectedSlideIndex * carouselWidth);
 
-    if (slideSelectors) {
+    if (Array.from($slideSelectors[0].children)) {
       setActiveStates(slideIndex);
     }
   };

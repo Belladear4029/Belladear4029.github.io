@@ -23,7 +23,7 @@ body {
 }
 
 section {
-  padding: 30px 10%;
+  padding: 50px 10%;
 
   &:nth-child(odd) {
     background-color: var(--secondary-color);
@@ -283,7 +283,11 @@ section {
 
       &:nth-child(6) {
         transform: rotate(3deg);
-        margin-left: 155px;
+        margin-left: 182px;
+      }
+
+      &:nth-child(7) {
+        margin-left: 16px;
       }
     }
   }
@@ -427,7 +431,7 @@ section {
       height: 20px;
       background: var(--tertiary-color);
       position: absolute;
-      top: 0;
+      top: -4px;
       border-radius: 5px;
     }
 
@@ -498,17 +502,29 @@ section {
       margin: 100px 0;
     }
 
-    &:nth-child(even) {
-      .work-description {
-        padding-left: 30px;
+    .title {
+      font-size: 30px;
+    }
+
+    @media only screen and (min-width: 751px) {
+      &:nth-child(even) {
+        .work-description {
+          padding-left: 30px;
+        }
+      }
+
+      &:nth-child(odd) .content {
+        flex-direction: row-reverse;
+
+        .work-description {
+          padding-right: 30px;
+        }
       }
     }
 
-    &:nth-child(odd) .content {
-      flex-direction: row-reverse;
-
+    @media only screen and (max-width: 750px) {
       .work-description {
-        padding-right: 30px;
+        padding-top: 20px;
       }
     }
   }
@@ -560,11 +576,13 @@ section {
       padding: 15px;
 
       @media only screen and (max-width: 750px) {
-        width: 80vw;
+        width: 77vw;
       }
 
       img {
         max-height: 100%;
+        width: 100%;
+        object-fit: contain;
       }
     }
   }
@@ -575,8 +593,8 @@ section {
     padding: 10px 40%;
 
     .slide-selector {
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       background: var(--dark-grey);
       border-radius: 100%;
       opacity: 0.5;
@@ -597,9 +615,10 @@ section {
   justify-content: center;
   min-height: 300px;
 
-  .contact-title {
+  .title {
     margin: 0 0 20px 0;
     color: var(--secondary-color);
+    font-size: 50px;
   }
 
   .contact-links {

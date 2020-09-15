@@ -49,7 +49,7 @@ body {
 }
 
 section {
-  padding: 30px 10%;
+  padding: 50px 10%;
 }
 section:nth-child(odd) {
   background-color: var(--secondary-color);
@@ -262,7 +262,10 @@ section:nth-child(even) {
 }
 .books-section .shelf:nth-child(2) .book:nth-child(6) {
   transform: rotate(3deg);
-  margin-left: 155px;
+  margin-left: 182px;
+}
+.books-section .shelf:nth-child(2) .book:nth-child(7) {
+  margin-left: 16px;
 }
 @media only screen and (max-width: 1242px) {
   .books-section .shelf {
@@ -386,7 +389,7 @@ section:nth-child(even) {
   height: 20px;
   background: var(--tertiary-color);
   position: absolute;
-  top: 0;
+  top: -4px;
   border-radius: 5px;
 }
 .cooker-section .pans .handle {
@@ -445,14 +448,24 @@ section:nth-child(even) {
 .work-section .project:not(:first-child) {
   margin: 100px 0;
 }
-.work-section .project:nth-child(even) .work-description {
-  padding-left: 30px;
+.work-section .project .title {
+  font-size: 30px;
 }
-.work-section .project:nth-child(odd) .content {
-  flex-direction: row-reverse;
+@media only screen and (min-width: 751px) {
+  .work-section .project:nth-child(even) .work-description {
+    padding-left: 30px;
+  }
+  .work-section .project:nth-child(odd) .content {
+    flex-direction: row-reverse;
+  }
+  .work-section .project:nth-child(odd) .content .work-description {
+    padding-right: 30px;
+  }
 }
-.work-section .project:nth-child(odd) .content .work-description {
-  padding-right: 30px;
+@media only screen and (max-width: 750px) {
+  .work-section .project .work-description {
+    padding-top: 20px;
+  }
 }
 .work-section .content {
   display: flex;
@@ -496,11 +509,13 @@ section:nth-child(even) {
 }
 @media only screen and (max-width: 750px) {
   .work-section .carousel .slide {
-    width: 80vw;
+    width: 77vw;
   }
 }
 .work-section .carousel .slide img {
   max-height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 .work-section .slide-selectors {
   display: flex;
@@ -508,8 +523,8 @@ section:nth-child(even) {
   padding: 10px 40%;
 }
 .work-section .slide-selectors .slide-selector {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background: var(--dark-grey);
   border-radius: 100%;
   opacity: 0.5;
@@ -526,9 +541,10 @@ section:nth-child(even) {
   justify-content: center;
   min-height: 300px;
 }
-.contact-section .contact-title {
+.contact-section .title {
   margin: 0 0 20px 0;
   color: var(--secondary-color);
+  font-size: 50px;
 }
 .contact-section .contact-links {
   width: 100%;
