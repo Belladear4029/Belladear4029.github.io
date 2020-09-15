@@ -38,6 +38,10 @@ section {
   font-family: "El Messiri", sans-serif;
 }
 
+.light {
+  color: var(--secondary-color);
+}
+
 .centered {
   display: block;
   text-align: center;
@@ -63,8 +67,9 @@ section {
 .nav {
   display: flex;
   justify-content: space-between;
-  height: 60px;
+  height: 100px;
   background-color: var(--secondary-color);
+  padding: 0 30px;
 
   .nav-title {
     align-self: flex-start;
@@ -75,13 +80,13 @@ section {
   }
 
   a {
-    font-size: 25px;
+    font-size: 32px;
     height: 100%;
     color: var(--primary-color);
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0 30px;
+    margin: 0 30px;
 
     &:hover {
       color: var(--tertiary-color);
@@ -156,8 +161,7 @@ section {
 // ABOUT
 .about-section {
   .bio {
-    color: var(--secondary-color);
-    margin: 0;
+    margin: 40px 0 50px;
     display: flex;
     align-items: center;
     text-align: justify;
@@ -206,10 +210,6 @@ section {
 .books-section {
   padding: 10px 0 0;
 
-  .book-title {
-    color: var(--secondary-color);
-  }
-
   .shelves {
     display: flex;
     flex-wrap: wrap;
@@ -220,7 +220,7 @@ section {
     display: flex;
   }
 
-  .title {
+  .book .title {
     transform: rotate(90deg);
     width: max-content;
   }
@@ -491,7 +491,6 @@ section {
 // WORK
 .work-title .title {
   font-size: 50px;
-  color: var(--secondary-color);
 }
 
 .work-section {
@@ -617,7 +616,6 @@ section {
 
   .title {
     margin: 0 0 20px 0;
-    color: var(--secondary-color);
     font-size: 50px;
   }
 
@@ -630,7 +628,6 @@ section {
 
       a {
         font-size: 20px;
-        color: var(--secondary-color);
         text-decoration: none;
       }
     }
