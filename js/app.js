@@ -29,7 +29,7 @@ $(() => {
     if (window.innerWidth > 750) {
       carouselWidth = window.innerWidth * 0.385;
     } else {
-      carouselWidth = window.innerWidth * 0.77;
+      carouselWidth = window.innerWidth * 0.74;
     }
   }
 
