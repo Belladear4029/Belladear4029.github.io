@@ -83,7 +83,7 @@ $(() => {
     endingPosition = xPosition;
     let slideIndex;
     const difference = startingPosition - endingPosition;
-    const threshold = 150;
+    const threshold = 100;
 
     if (difference > threshold) {
       slideIndex = selectedSlideIndex + 1;
