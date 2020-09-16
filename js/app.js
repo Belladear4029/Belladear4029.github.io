@@ -25,6 +25,11 @@ $(() => {
     setSelectedSlideIndex(selectedSlideIndex);
   });
 
+  const setSelectedCarousel = (carouselContainer) => {
+    $activeCarousel = carouselContainer.find($carousel)[0];
+    $slideSelectors = carouselContainer.find($(".slide-selectors"));
+  }
+
   const setCarouselWidth = () => {
     if (window.innerWidth > 750) {
       carouselWidth = window.innerWidth * 0.385;
@@ -49,8 +54,8 @@ $(() => {
 
   const setActiveStates = (slideIndex) => {
     const slideSelectors = Array.from($slideSelectors[0].children);
-    slideSelectors.forEach(slideSelector => slideSelector.classList.remove('active'))
-    const selectedSlideSelector = slideSelectors.find((slideSelector, i) => i === slideIndex)
+    slideSelectors.forEach(slideSelector => slideSelector.classList.remove('active'));
+    const selectedSlideSelector = slideSelectors.find((slideSelector, i) => i === slideIndex);
     selectedSlideSelector.classList.add('active');
   }
 
@@ -65,22 +70,17 @@ $(() => {
     setCarouselPosition(-selectedSlideIndex * carouselWidth);
 
     if (Array.from($slideSelectors[0].children)) {
-      setActiveStates(slideIndex);
+      setActiveStates(selectedSlideIndex);
     }
   };
-
-  $slideSelectors.click(function (event) {
-    const slideIndex = Array.from(event.target.parentNode.children).indexOf(event.target);
-    setSelectedSlideIndex(slideIndex);
-  });
 
   let startingPosition;
   let endingPosition;
 
-  const snapToSlide = (event) => {
+  const snapToSlide = (event, xPosition) => {
     $activeCarousel.style.transition = 'transform ease 1s';
     mouseIsDown = false;
-    endingPosition = event.screenX;
+    endingPosition = xPosition;
     let slideIndex;
     const difference = startingPosition - endingPosition;
     const threshold = 150;
@@ -92,40 +92,92 @@ $(() => {
     } else {
       slideIndex = selectedSlideIndex;
     }
-    setSelectedSlideIndex(slideIndex)
+    setSelectedSlideIndex(slideIndex);
   }
 
-  $carousel.mousedown(function(event) {
-    const exisitingPosition = $(this)[0].style.transform.replace(/[^\d.]/g, '');
+  const onDragStart = (carousel, event, xPosition) => {
+    const exisitingPosition = carousel.style.transform.replace(/[^\d.]/g, '');
     const selectedSlideIndex = Math.round(+exisitingPosition / carouselWidth);
-    $activeCarousel = $(this)[0];
-    setSelectedSlideIndex(selectedSlideIndex)
+    $activeCarousel = carousel;
+    setSelectedSlideIndex(selectedSlideIndex);
     $activeCarousel.style.transition = 'none';
-    startingPosition = event.screenX;
+    startingPosition = xPosition;
     mouseIsDown = true;
-  });
+  }
 
-  $carouselContainer.mousedown(function(event) {
-    $activeCarousel = $(this).find($carousel)[0];
-    $slideSelectors = $(this).find($(".slide-selectors"));
-  });
-
-  $carousel.mousemove(function (event) {
+  const onDrag = (event, xPosition) => {
     if (mouseIsDown) {
-      event.preventDefault()
-      const dragDistance = startingPosition - event.screenX;
+      event.preventDefault();
+      const dragDistance = startingPosition - xPosition;
       const dragPosition = carouselPosition - dragDistance;
       setCarouselPosition(dragPosition);
     }
-  });
+  }
 
-  $carousel.mouseleave(function (event) {
+  const onDragEnd = (event, xPosition) => {
     if (mouseIsDown) {
-      snapToSlide(event)
+      snapToSlide(event, xPosition);
     }
+  }
+
+  $slideSelectors.click(function () {
+    const slideIndex = Array.from(event.target.parentNode.children).indexOf(event.target);
+    setSelectedSlideIndex(slideIndex);
   });
 
-  $carousel.mouseup(function (event) {
-    snapToSlide(event)
+  //DESKTOP
+  $carouselContainer.mousedown(function() {
+    const carouselContainer = $(this);
+    setSelectedCarousel(carouselContainer);
+  });
+
+  $carousel.mousedown(function() {
+    const carousel = $(this)[0];
+    const xPosition = event.screenX;
+
+    onDragStart(carousel, event, xPosition);
+  });
+
+  $carousel.mousemove(function () {
+    const xPosition = event.screenX;
+    onDrag(event, xPosition);
+  });
+
+  $carousel.mouseup(function () {
+    const xPosition = event.screenX;
+    onDragEnd(event, xPosition);
+  });
+
+  $carousel.mouseleave(function () {
+    const xPosition = event.screenX;
+    onDragEnd(event, xPosition);
+  });
+
+  //MOBILE
+  $carouselContainer.on('touchstart', function() {
+    const carouselContainer = $(this);
+    setSelectedCarousel(carouselContainer);
+  });
+
+  $carousel.on('touchstart', function() {
+    const carousel = $(this)[0];
+    const xPosition = event.touches[0].clientX;
+
+    onDragStart(carousel, event, xPosition);
+  });
+
+  $carousel.on('touchmove', function() {
+    const xPosition = event.touches[0].clientX;
+    onDrag(event, xPosition);
+  });
+
+  $carousel.on('touchend', function() {
+    const xPosition = event.changedTouches[0].clientX;
+    onDragEnd(event, xPosition);
+  });
+
+  $carousel.on('touchcancel', function() {
+    const xPosition = event.changedTouches[0].clientX;
+    onDragEnd(event, xPosition);
   });
 });

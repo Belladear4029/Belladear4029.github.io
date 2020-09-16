@@ -336,6 +336,7 @@ section:nth-child(even) {
   }
   .books-section .shelves .shelf .book {
     min-width: 23px;
+    border-width: 2px;
   }
   .books-section .shelves .shelf .book .title {
     font-size: 3vw;
@@ -366,6 +367,11 @@ section:nth-child(even) {
   background: var(--primary-color);
   border: 4px solid var(--dark-grey);
 }
+@media only screen and (max-width: 750px) {
+  .cooker-section .cooker-container .cooker {
+    border-width: 2px;
+  }
+}
 .cooker-section .cooker-container .stove-container {
   width: 50%;
   padding: 20px;
@@ -387,6 +393,9 @@ section:nth-child(even) {
   font-size: 2vw;
 }
 @media only screen and (max-width: 750px) {
+  .cooker-section .cooker-container .stove-container .stove {
+    border-width: 2px;
+  }
   .cooker-section .cooker-container .stove-container .stove .title {
     font-size: 4vw;
   }
