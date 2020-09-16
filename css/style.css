@@ -292,7 +292,7 @@ section:nth-child(even) {
 .books-section .shelf:nth-child(2) .book:nth-child(7) {
   margin-left: 16px;
 }
-@media only screen and (max-width: 1242px) {
+@media only screen and (max-width: 1430px) {
   .books-section .shelf {
     height: 400px;
   }
@@ -532,6 +532,9 @@ section:nth-child(even) {
 .work-section .work-description {
   width: 50vw;
   overflow: hidden;
+}
+.work-section .work-description .title {
+  text-align: left;
 }
 .work-section .work-description p {
   line-height: 1.5;

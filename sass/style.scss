@@ -315,7 +315,7 @@ section {
     }
   }
 
-  @media only screen and (max-width: 1242px) {
+  @media only screen and (max-width: 1430px) {
     .shelf {
       height: 400px;
 
@@ -607,6 +607,10 @@ section {
   }
 
   .work-description {
+    .title {
+      text-align: left;
+    }
+
     p {
       line-height: 1.5;
     }
