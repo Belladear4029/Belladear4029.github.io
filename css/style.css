@@ -540,13 +540,66 @@ section:nth-child(even) {
     padding-top: 20px;
   }
 }
+.work-section .project:nth-child(odd) .content .label {
+  left: 20px;
+}
+.work-section .project:nth-child(even) .content .label {
+  right: 20px;
+  left: auto;
+}
 .work-section .content {
   display: flex;
 }
-.work-section .carousel-container,
+.work-section .content .label {
+  position: absolute;
+  bottom: -30px;
+  left: 30px;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  border: 4px solid var(--dark-grey);
+}
+.work-section .content .label h4 {
+  color: var(--secondary-color);
+  margin: auto;
+  transform: rotate(-15deg);
+}
+@media only screen and (max-width: 750px) {
+  .work-section .content .label {
+    width: 75px;
+    height: 75px;
+    border-width: 2px;
+    left: 10px;
+  }
+  .work-section .content .label h4 {
+    font-size: 12px;
+  }
+}
+.work-section .content .label.freelance {
+  background-color: var(--tertiary-color);
+  border-color: var(--white);
+}
+.work-section .content .label.freelance h4 {
+  color: var(--white);
+  transform: rotate(19deg);
+}
+.work-section .content .label.personal {
+  background-color: var(--white);
+}
+.work-section .content .label.personal h4 {
+  color: var(--primary-grey);
+}
+.work-section .luckington .content .label h4,
+.work-section .spice-drawer .content .label h4 {
+  transform: rotate(-6deg);
+}
+.work-section .carousel-column,
 .work-section .work-description {
-  width: 50vw;
-  overflow: hidden;
+  width: 40vw;
+  position: relative;
+  height: fit-content;
 }
 .work-section .work-description .title {
   margin-top: 0;
@@ -559,6 +612,7 @@ section:nth-child(even) {
   color: var(--tertiary-color);
 }
 .work-section .carousel-container {
+  overflow: hidden;
   background: var(--white);
   border: 4px solid var(--dark-grey);
   height: 25vw;
