@@ -31,10 +31,10 @@ $(() => {
   }
 
   const setCarouselWidth = () => {
-    if (window.innerWidth > 750) {
+    if (window.innerWidth > 770) {
       carouselWidth = window.innerWidth * 0.385;
     } else {
-      carouselWidth = window.innerWidth * 0.74;
+      carouselWidth = window.innerWidth * 0.83;
     }
   }
 
@@ -78,7 +78,7 @@ $(() => {
   let endingPosition;
 
   const snapToSlide = (event, xPosition) => {
-    $activeCarousel.style.transition = 'transform ease 1s';
+    $activeCarousel.style.transition = 'transform ease 0.5s';
     mouseIsDown = false;
     endingPosition = xPosition;
     let slideIndex;

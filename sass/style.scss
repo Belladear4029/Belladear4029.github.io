@@ -33,7 +33,7 @@ section {
     background-color: var(--primary-color);
   }
 
-  @media only screen and (max-width: 750px) {
+  @media only screen and (max-width: 770px) {
     padding: 20px 5%;
   }
 }
@@ -54,7 +54,7 @@ section {
 .wrap {
   display: flex;
 
-  @media only screen and (max-width: 750px) {
+  @media only screen and (max-width: 770px) {
     flex-wrap: wrap;
 
     & > * {
@@ -64,6 +64,20 @@ section {
     &.reverse {
       flex-direction: column-reverse;
     }
+  }
+}
+
+.isSmall {
+  display: none;
+
+  @media only screen and (max-width: 770px) {
+    display: block;
+  }
+}
+
+.isLarge {
+  @media only screen and (max-width: 770px) {
+    display: none;
   }
 }
 
@@ -97,7 +111,7 @@ section {
     }
   }
 
-  @media only screen and (max-width: 750px) {
+  @media only screen and (max-width: 770px) {
     height: 80px;
     padding: 0 15px;
 
@@ -122,7 +136,7 @@ section {
     font-size: 7vw;
   }
 
-  @media only screen and (max-width: 750px) {
+  @media only screen and (max-width: 770px) {
     height: calc(100vh - 90px);
   }
 }
@@ -361,7 +375,7 @@ section {
     }
   }
 
-  @media only screen and (max-width: 750px) {
+  @media only screen and (max-width: 770px) {
     .shelves {
       min-height: 400px;
 
@@ -412,7 +426,7 @@ section {
       background: var(--primary-color);
       border: 4px solid var(--dark-grey);
 
-      @media only screen and (max-width: 750px) {
+      @media only screen and (max-width: 770px) {
         border-width: 2px;
       }
     }
@@ -438,7 +452,7 @@ section {
           font-size: 2vw;
         }
 
-        @media only screen and (max-width: 750px) {
+        @media only screen and (max-width: 770px) {
           border-width: 2px;
 
           .title {
@@ -488,7 +502,7 @@ section {
     width: 50%;
     margin-top: 68px;
 
-    @media only screen and (max-width: 750px) {
+    @media only screen and (max-width: 770px) {
       margin: 0 0 100px;
     }
 
@@ -589,7 +603,7 @@ section {
       }
     }
 
-    @media only screen and (max-width: 750px) {
+    @media only screen and (max-width: 770px) {
       .work-description {
         padding-top: 20px;
       }
@@ -608,11 +622,12 @@ section {
 
   .work-description {
     .title {
-      text-align: left;
+      margin-top: 0;
     }
 
     p {
-      line-height: 1.5;
+      font-size: 15px;
+      line-height: 1.4;
     }
 
     a {
@@ -625,7 +640,7 @@ section {
     border: 4px solid var(--dark-grey);
     height: 25vw;
 
-    @media only screen and (max-width: 750px) {
+    @media only screen and (max-width: 770px) {
       height: 50vw;
     }
   }
@@ -655,9 +670,12 @@ section {
 
     @media only screen and (max-width: 750px) {
       height: 85%;
+    }
+
+    @media only screen and (max-width: 770px) {
 
       .slide {
-        width: 74vw;
+        width: 83vw;
       }
     }
   }
@@ -710,7 +728,7 @@ section {
         font-size: 20px;
         text-decoration: none;
 
-        @media only screen and (max-width: 750px) {
+        @media only screen and (max-width: 770px) {
           font-size: 14px;
         }
       }
