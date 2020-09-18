@@ -8,6 +8,16 @@
   --white: #fff;
 }
 
+@font-face {
+  font-family: AlbraLight;
+  src: url(../assets/AlbraLight.otf);
+}
+
+@font-face {
+  font-family: AlbraRegular;
+  src: url(../assets/AlbraRegular.otf);
+}
+
 // GLOBAL
 * {
   font-family: "Montserrat", sans-serif;
@@ -39,7 +49,7 @@ section {
 }
 
 .title {
-  font-family: "El Messiri", sans-serif;
+  font-family: "AlbraLight";
 }
 
 .light {
@@ -90,6 +100,7 @@ section {
   padding: 0 30px;
 
   .nav-title {
+    font-size: 32px;
     align-self: flex-start;
   }
 
@@ -130,6 +141,7 @@ section {
   height: calc(100vh - 110px);
   color: var(--primary-color);
   border-bottom: 10px var(--primary-color) solid;
+  padding-top: 30px;
 
   .main .title {
     margin: 0;
@@ -148,8 +160,8 @@ section {
     margin: 40px 0 50px;
     display: flex;
     align-items: center;
-    text-align: justify;
     font-size: 4vw;
+    letter-spacing: 1px;
   }
 }
 
