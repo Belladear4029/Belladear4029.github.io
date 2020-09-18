@@ -154,9 +154,10 @@ section:nth-child(even) {
   margin: 0;
   font-size: 7vw;
 }
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 750px) {
   .home-section {
-    height: calc(100vh - 90px);
+    height: auto;
+    padding-bottom: 60px;
   }
 }
 

@@ -136,8 +136,9 @@ section {
     font-size: 7vw;
   }
 
-  @media only screen and (max-width: 770px) {
-    height: calc(100vh - 90px);
+  @media only screen and (max-width: 750px) {
+    height: auto;
+    padding-bottom: 60px;
   }
 }
 
