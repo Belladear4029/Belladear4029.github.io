@@ -289,6 +289,16 @@ section {
         transform: rotate(-18deg);
         margin: 0 3px;
       }
+
+      &:nth-child(7) {
+        transform: rotate(-18deg);
+        margin: 0 3px;
+      }
+
+      &:nth-child(8) {
+        transform: rotate(-20deg);
+        margin: 0 7px;
+      }
     }
   }
 
@@ -325,7 +335,7 @@ section {
       }
 
       &:nth-child(7) {
-        margin-left: 16px;
+        margin-left: 15px;
       }
     }
   }
@@ -376,7 +386,7 @@ section {
     }
   }
 
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 750px) {
     .shelves {
       min-height: 400px;
 
@@ -396,6 +406,12 @@ section {
           }
         }
 
+        &:first-child {
+          .book {
+            margin: 0 5px;
+          }
+        }
+
         &:nth-child(2) {
           .book {
             &:nth-child(1) {
@@ -406,6 +422,10 @@ section {
             &:nth-child(2) {
               transform: rotate(17deg);
               margin: 0 8px;
+            }
+
+            &:nth-child(5) {
+              margin: 0 28px 0 10px;
             }
           }
         }

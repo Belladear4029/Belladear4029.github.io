@@ -281,6 +281,14 @@ section:nth-child(even) {
   transform: rotate(-18deg);
   margin: 0 3px;
 }
+.books-section .shelf:first-child .book:nth-child(7) {
+  transform: rotate(-18deg);
+  margin: 0 3px;
+}
+.books-section .shelf:first-child .book:nth-child(8) {
+  transform: rotate(-20deg);
+  margin: 0 7px;
+}
 .books-section .shelf:nth-child(2) .book:nth-child(1) {
   transform: rotate(-20deg);
   margin: 0 8px;
@@ -306,7 +314,7 @@ section:nth-child(even) {
   margin-left: 182px;
 }
 .books-section .shelf:nth-child(2) .book:nth-child(7) {
-  margin-left: 16px;
+  margin-left: 15px;
 }
 @media only screen and (max-width: 1430px) {
   .books-section .shelf {
@@ -343,7 +351,7 @@ section:nth-child(even) {
     margin-left: 0;
   }
 }
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 750px) {
   .books-section .shelves {
     min-height: 400px;
   }
@@ -360,6 +368,9 @@ section:nth-child(even) {
   .books-section .shelves .shelf .book .category {
     display: none;
   }
+  .books-section .shelves .shelf:first-child .book {
+    margin: 0 5px;
+  }
   .books-section .shelves .shelf:nth-child(2) .book:nth-child(1) {
     transform: rotate(10deg);
     margin: 0 8px;
@@ -367,6 +378,9 @@ section:nth-child(even) {
   .books-section .shelves .shelf:nth-child(2) .book:nth-child(2) {
     transform: rotate(17deg);
     margin: 0 8px;
+  }
+  .books-section .shelves .shelf:nth-child(2) .book:nth-child(5) {
+    margin: 0 28px 0 10px;
   }
 }
 
