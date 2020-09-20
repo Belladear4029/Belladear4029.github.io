@@ -26,6 +26,11 @@
     transform: rotate(0);
   }
 }
+@keyframes rotate360 {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .main {
   animation-duration: 4s;
   animation-name: fadeIn;
@@ -34,6 +39,12 @@
 .handle {
   transform-origin: top center;
   animation: rotate 0.2s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+.dial {
+  animation: rotate360 0.1s linear infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
 }
