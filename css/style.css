@@ -146,6 +146,7 @@ section:nth-child(even) {
 .nav .nav-title {
   font-size: 32px;
   align-self: flex-start;
+  margin: auto 0;
 }
 .nav .nav-items {
   display: flex;
@@ -166,6 +167,9 @@ section:nth-child(even) {
   .nav {
     height: 80px;
     padding: 0 15px;
+  }
+  .nav .nav-title {
+    font-size: 15px;
   }
   .nav a {
     font-size: 15px;
