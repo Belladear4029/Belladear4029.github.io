@@ -1,13 +1,3 @@
-.main {
-  animation-duration: 4s;
-  animation-name: fadeIn;
-}
-
-.navbar a:hover {
-  animation-duration: 1s;
-  animation-name: underline;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -19,14 +9,26 @@
     opacity: inherit;
   }
 }
-@keyframes underline {
+@keyframes rotate {
   from {
-    border-bottom-color: #3C2E3D;
+    transform: rotate(0deg);
   }
   to {
-    border-bottom-color: #ECC7C0;
+    transform: rotate(360deg);
   }
 }
+.main {
+  animation-duration: 4s;
+  animation-name: fadeIn;
+}
+
+.handle {
+  transform-origin: top center;
+  animation: rotate 0.5s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
 :root {
   --primary-color: #28383e;
   --secondary-color: #fffaf6;
