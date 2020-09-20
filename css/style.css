@@ -11,10 +11,19 @@
 }
 @keyframes rotate {
   from {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+  50% {
     transform: rotate(0deg);
   }
+  75% {
+    transform: rotate(30deg);
+  }
   to {
-    transform: rotate(360deg);
+    transform: rotate(0);
   }
 }
 .main {
@@ -24,7 +33,7 @@
 
 .handle {
   transform-origin: top center;
-  animation: rotate 0.5s linear infinite;
+  animation: rotate 0.2s linear infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
 }
