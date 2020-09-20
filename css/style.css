@@ -38,7 +38,7 @@
 
 .handle {
   transform-origin: top center;
-  animation: rotate 0.2s linear infinite;
+  animation: rotate 0.1s linear infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
 }
