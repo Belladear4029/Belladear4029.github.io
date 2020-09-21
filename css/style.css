@@ -50,8 +50,8 @@
 }
 
 :root {
-  --primary-color: #333;
-  --secondary-color: #fdfbfb;
+  --primary-color: #002929;
+  --secondary-color: #fffaf6;
   --tertiary-color: #ff3333;
   --dark-grey: #4a4a4a;
   --white: #fff;
@@ -718,7 +718,7 @@ section:nth-child(even) {
 }
 .work-section .carousel .slide img {
   max-height: 100%;
-  width: 100%;
+  width: 75%;
   object-fit: contain;
 }
 @media only screen and (max-width: 750px) {
