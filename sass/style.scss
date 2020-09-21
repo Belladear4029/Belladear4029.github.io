@@ -1,9 +1,9 @@
 @import "./animations";
 
 :root {
-  --primary-color: #28383e;
-  --secondary-color: #fffaf6;
-  --tertiary-color: #de6247;
+  --primary-color: #333;
+  --secondary-color: #fdfbfb;
+  --tertiary-color: #ff3333;
   --dark-grey: #4a4a4a;
   --white: #fff;
 }
@@ -476,6 +476,7 @@ section {
         background: var(--secondary-color);
         color: var(--primary-color);
         border: 4px double var(--dark-grey);
+        transition: background 2s;
 
         .title {
           position: absolute;
@@ -483,6 +484,10 @@ section {
           left: 50%;
           transform: translate(-50%, -100%);
           font-size: 2vw;
+        }
+
+        &:hover {
+          background: var(--tertiary-color);
         }
       }
 
@@ -548,10 +553,11 @@ section {
       display: block;
       width: 80%;
       height: 20px;
-      background: var(--tertiary-color);
+      background: var(--white);
       position: absolute;
-      top: -4px;
+      top: -8px;
       border-radius: 5px;
+      border: 4px double;
     }
 
     .handle {
@@ -566,7 +572,7 @@ section {
         display: block;
         width: 5px;
         height: 5px;
-        background: var(--secondary-color);
+        background: var(--white);
         position: absolute;
         top: 5px;
         left: 50%;
@@ -697,6 +703,7 @@ section {
       border: 4px solid var(--dark-grey);
 
       h4 {
+        font-size: 18px;
         color: var(--secondary-color);
         margin: auto;
         transform: rotate(-15deg);
