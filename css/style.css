@@ -58,12 +58,8 @@
 }
 
 @font-face {
-  font-family: AlbraLight;
-  src: url(../assets/AlbraLight.otf);
-}
-@font-face {
-  font-family: AlbraRegular;
-  src: url(../assets/AlbraRegular.otf);
+  font-family: AlbraSansRegular;
+  src: url(../assets/AlbraSansRegular.otf);
 }
 * {
   font-family: "Montserrat", sans-serif;
@@ -94,7 +90,7 @@ section:nth-child(even) {
 }
 
 .title {
-  font-family: "AlbraLight";
+  font-family: "AlbraSansRegular";
 }
 
 .light {
@@ -303,7 +299,7 @@ section:nth-child(even) {
 }
 .books-section .shelf:first-child .book:nth-child(3) {
   transform: rotate(-8deg);
-  margin: 0 8px;
+  margin: 0 12px;
 }
 .books-section .shelf:first-child .book:nth-child(4) {
   transform: rotate(-12deg);
@@ -311,7 +307,7 @@ section:nth-child(even) {
 }
 .books-section .shelf:first-child .book:nth-child(5) {
   transform: rotate(-16deg);
-  margin: 0 10px;
+  margin: 0 12px;
 }
 .books-section .shelf:first-child .book:nth-child(6) {
   transform: rotate(-18deg);
@@ -584,6 +580,11 @@ section:nth-child(even) {
 
 .work-title .title {
   font-size: 50px;
+}
+@media only screen and (min-width: 751px) {
+  .work-title {
+    padding: 100px 10%;
+  }
 }
 
 .work-section {
