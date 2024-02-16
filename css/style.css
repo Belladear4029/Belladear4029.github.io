@@ -626,6 +626,7 @@ section:nth-child(even) {
 }
 .work-section .content {
   display: flex;
+  align-items: center;
 }
 .work-section .content .label {
   position: absolute;
